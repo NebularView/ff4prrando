@@ -1,0 +1,7 @@
+FFS ability links to content where ability.id = content.type_value AND content.type_id=4
+
+.. why four, i'm not sure
+ 
+ random.choice("10", "11", "12", "13", "14", "15", "16", "17", "19", "20", "22", "23", "25", "26", "27", "28", "31", "34", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0")
+ 
+ [ 4 12  1  5 20  9  25 14 30  7 36 27 15 29 16]

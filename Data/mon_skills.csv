@@ -1,0 +1,118 @@
+Name,Description
+Alarm(Alert),Summons a monster into battle. 
+Atomic Blast(Fission),"Deals damage equal to the user's current HP to the entire target, and kills the user."
+Bad Breath(Breath),"Attempts to inflict Confuse, Toad, Mini, Pig, Silence, and Blind"
+Barrier Shift ,Changes elemental weakness and resistances. 
+Beak(Peck),Inflicts Petrify. 
+Beam ,"Inflicts damage to one target, equal to 1/10 of a character's max HP"
+Berserk(Bersk),Inflicts Berserk. 
+Big Bang ,"Inflicts around 2,300 damage to the target and Sap."
+Bile(Digest)(Digestive Fluid)(Digestive Acid),Minor non-elemental damage and inflicts Sap. 
+Binding Cold(Hold Gas)(Cursed Aura)(Ice Bind),Inflicts Paralyze to the target. 100% accuracy rate. 
+Bio(Virus),Moderate non-elemental damage and Sap. 
+Black Fang(Demolish)(Blk.Fang),Inflicts Death with 100% accuracy rate. 
+Black Hole(Blk.Hole),"Removes Berserk, Float, Blink (2), Blink (1), Barrier, and Reflect from all allies."
+Blaster ,50% chance of inflicting Paralyze or Death. 
+Blaze ,Heavy Ice-elemental damage to the target. 
+Blink ,The target automatically dodges the next two physical attacks targeted at them. 
+Blizzara(Ice2),Moderate Ice-elemental damage. 
+Blizzaga(Ice3),Heavy Ice-elemental damage. 
+Bloodfeast(Vampire)(Blood Suck),Minor non-elemental damage and drains HP from target. Also inflicts Sap. 
+Break(Stone),Inflicts Petrify. 
+Chain Explosion(Reaction),Destroys all targets. Used as a counter to a Lightning-elemental attack. 
+Confuse ,Inflicts Confuse to one or all targets. 
+Constrict(Entangle),Inflicts Paralyze. Used as a counter. 
+Croak ,Summons Bog Toads to the battle. 
+Crush(Crash Down),Inflicts Death with 100% accuracy. 
+Curaga(Cure3),Restores a great amount of HP to a single target. 
+Curaja(Cure4),Restores an extreme amount of HP to a single target. 
+Curse ,"Inflicts Curse on a single target. When used by Apparition, targets the entire target."
+Cursed Elegy(DullSong)(Cursed Song)(Song of Curse),Used as a counter to Fire-elemental attacks (Scarmiglione) or when hit by a physical attack during Countdown (Brachioraidos). Inflicts Slow to the target. 
+Dark Breath(D.Breath),Moderate Fire-elemental damage to the target. 
+Darkness(Dummy)(Dark)(Dark Wave),Deals damage to all characters in exchange of HP. 
+Death(Fatal),Attempts to inflict Death on a single ally. 
+Deluge(Big Wave)(Big Tsunami)(Tidal Wave),Inflicts non-elemental damage equal to 25% of the target's maximum HP.
+Divine Judgment ,Extreme non-elemental damage to the target. 
+(Disrupt) ,"Removes Berserk, Float, Blink (2), Blink (1), and Barrier. Also resets the speed modifier to the default of 16."
+Doom(Count),Inflicts Doom on one ally or the entire target. Is Reflectable. 
+Drain ,Inflicts moderate non-elemental damage on one target and transfers the damage as health to the user. 
+Earthquake(Quake),Weaker version of the Quake spell. 
+Electromagnetic Radiation(Magnet)(Electromagnetic Field)(Magnetic Radiation),Inflicts Stop. Used as a counter to Lightning-elemental attacks by Armor Constructs. 
+Embrace(Hug),Inflicts Petrify. Also fully heals target before Petrify. 
+Entice(Charm)(Lure),Inflicts Confuse. 
+Fira(Fire2),Moderate Fire-elemental damage. 
+Firaga(Fire3),Major Fire-elemental damage. 
+Fire(Fire1),Minor Fire-elemental damage. 
+Flame(Fire),Inflicts major Fire elemental damage to the target. 
+Flamethrower(Emission)(Flame Thrower),Minor Fire-elemental damage to the targets.
+Flare(Nuke,Extreme non-elemental damage to one target. 
+Freezing Mist(Cold Mist),Used as a counter when in Mist form. Moderate Ice-elemental damage to the target. 
+Gas(Poison)(Poison Gas),Inflicts Poison and minor non-elemental damage to the target. 
+Gaze(Glance),"1/3 chance of either Confuse, Sleep, or Paralyze. In Lunar Titan's case, inflicts Gradual Petrify."
+Glare(Glance)(Pupil),Inflicts Confuse. 
+Haste(Fast),Doubles the targets action speed. 
+Hatch ,"Removes Egg status, causing the monster to take on its normal appearance and behavior."
+Heal(Remedy)(Restore),Restores HP equal to 1/10 of max HP. 
+Hex(Whisper),Inflicts Pig on an ally. 
+Hold ,Inflicts Paralyze. 
+Holy(White),Heavy Holy-elemental damage. 
+Icestorm(Blizzard)(Snowstorm)(Ice Storm),Heavy Ice-elemental damage to one or more target members. 
+Inferno ,Heavy Fire-elemental damage. 
+Jump ,"User leaves the screen for a short period of time, then deals physical damage to target."
+Kick ,Deals damage physical damage to all targets. 
+Laser ,Non elemental damage based on user's current HP. 
+Laser Barrage(Maser)(Laser)(Piercing Laser),Inflicts damage to the target equal to 1/10 of their max HP. 
+Leech ,
+Libra(Peep)(Scan),View vital statistics of target. 
+Light of Babil ,Inflicts extreme non-elemental damage to the target. 
+Lifefont(Suction)(Absorb),Restores HP equal to 33% of current HP. 
+Lightning(Thunder),Moderate Lightning-elemental damage. 
+Maelstrom(Storm),Reduces target's HP to single digits. Used as a counter by Behemoths to Holy-elemental attacks. 
+Mind Blast(Blast),Moderate non-elemental damage as well as Paralyze and Sap. 
+Mini(Size),Inflicts and/or removes the Mini status. 
+Megaflare(MegaNuke)(Mega Flare),Extreme non-elemental damage to the target. 
+Meteor(Meteo),Heavy Holy-elemental damage to the target.
+Needle ,Inflicts non-elemental damage. Ignores Protect status. 
+Ninth Dimension(Disrupt)(Dimension 9),Inflicts Death. Is Reflectable. 
+Object 199(Globe 199)(Number 199),Inflicts extreme non-elemental damage to an ally. 
+Osmose(Psych)(Asper),Drains MP from target to restore own MP. 
+Pincers(Counter)(Counter Horn),Used as a counter to all attacks except the Chocobo summon. 
+Poison Powder(Powder)(Cold Snap),Non-elemental damage and Blind to target. 
+Pollen ,Non-elemental damage and Sap on the target. 
+Protect(Armor),Increases Defense. 
+Quake ,Major non-elemental damage to all non-floating targets. 
+Raise(Life1)(Life),Revives a KO'd ally with minimum HP. 
+Reflect(Wall),Bounces spell off of target back at target target. 
+Regenerate ,Revives all KO'd allies. 
+Reraise(Recover)(Arise),Revives one fallen target. 
+Restore(Heal(Medic)(Panacea),Removes all bad statuses from target. 
+Retreat ,Escape from battle. 
+Reversal Gas ,Inflicts Reverse on all target members and targets. 
+Samba de Flan(Dancing),Inflicts Berserk. 
+Scorch(Glare),Major Fire-elemental damage. 
+Self-Destruct(Explode),Deals damage equal to remaining HP. 
+Shell ,Casts Shell
+Silence(Mute),Prevents target from using spells. 
+Slap ,"1/3 chance of Paralyze, Silence, or Curse."
+Sleep ,Inflicts Sleep. 
+Sleeping Gas(Gas)(Sleep Gas),Inflicts Sleep to the target. Counter to physical damage. 
+Slow ,Reduces target's speed. 
+Stone Gaze(Petrify),Inflicts Gradual Petrify. 
+Stone Touch(Ray)(Finger Tip),Inflicts Gradual Petrify. 
+Stop ,Inflicts Stop. 
+Summon(Call),Calls a monster into the battle. Golbez calls Shadow Dragon. 
+Target(Search),Target does not do anything. It is only used by Trap Door to warn the player that it's about to use Ninth Dimension. 
+Thermal Ray(Heat Ray),Inflicts major Fire-elemental damage to the target. 
+Thundara(Lit-2)(Bolt2),Moderate Lightning elemental damage. 
+Thundaga(Lit-3)(Bolt3),Heavy Lightning-elemental damage. 
+Thunder(Lit-1)(Bolt1),Minor Lightning-elemental damage. 
+Thunderbolt(Blitz),Moderate Lightning-elemental damage to the target. 
+Toad ,Inflicts and/or removes the Toad status. 
+Tongue(Lick),Inflicts damage and Sleep. 
+Tornado(Weak)(Wind),Reduces a target's HP to single digits. 
+Tsunami(Wave),Heavy Water-elemental damage to the target.
+Whirlwind(Tornado),Minor non-elemental damage. 
+Whirl(Weak)(Wall),"Same as the Black Magic spell Tornado, but is more effective. Used as a counter to Holy-elemental attacks."
+Wing Scales ,Inflicts Blind. 
+(Vanish) ,"Used in Zeromus' script to kill self, name is not displayed during battle."
+Zantetsuken(Odin),Extreme non-elemental damage to the target. 

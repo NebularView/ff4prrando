@@ -1,0 +1,45 @@
+"""    output3 = output['value1'].item()
+    
+    #print (output)
+
+    # Result
+    cid = output['content_id'].item()
+    jid = output['job_id'].item()
+    
+    jout = jobdata.query('id == @jid')
+    
+    #print(jout)
+    
+    jobmes = jout['mes_id_name'].item()
+    
+    query1 = dataquery(cid)
+    
+    output1 = query1.contentdataquery()
+    
+    #print(jobmes)
+    
+    query2 = dataquery(jobmes)
+    
+    output2 = query2.sysdataquery()
+    
+    print(output2, output3, output1)
+    
+    
+    #q = output['content_id'].item()
+    
+    #cq = contentdata.query('id == @q')
+    
+    #print (cq)
+    
+    #q2 = cq['mes_id_name'].item()
+    
+    #print (q2)
+    
+    #sq = systemdata.query('id == @q2')
+    
+    #print (sq)
+    
+    #r = sq['value'].item()
+    
+    #print(r)
+"""
