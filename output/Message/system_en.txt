@@ -1609,69 +1609,69 @@ MSG_SYSTEM_432	Retry
 MSG_SYSTEM_426	Now Loading...
 MSG_SYSTEM_439	License verification failed. The app will close.
 MSG_SYSTEM_440	Please check your device's settings and internet connection and restart the app.
-MSG_MON_INF_20	Used as a counter when in Mist form. Moderate Ice-elemental damage to the party. 
+MSG_MON_INF_20	Used as a counter when in Mist form. Moderate Ice-elemental damage to the target. 
 MSG_MON_INF_67	Inflicts non-elemental damage. Ignores Protect status. 
 MSG_MON_INF_45	Target does not do anything. It is only used by Trap Door to warn the player that it's about to use Ninth Dimension. 
 MSG_MON_INF_58	Reduces a target's HP to single digits. 
-MSG_MON_INF_08	Inflicts Paralyze to the party. 100% accuracy rate. 
+MSG_MON_INF_08	Inflicts Paralyze to the target. 100% accuracy rate. 
 MSG_MON_INF_68	Used as a counter to all attacks except the Chocobo summon. 
 MSG_MON_INF_29	Inflicts Berserk. 
-MSG_MON_INF_22	Used as a counter to Fire-elemental attacks (Scarmiglione) or when hit by a physical attack during Countdown (Brachioraidos). Inflicts Slow to the party. 
+MSG_MON_INF_22	Used as a counter to Fire-elemental attacks (Scarmiglione) or when hit by a physical attack during Countdown (Brachioraidos). Inflicts Slow to the target. 
 MSG_MON_INF_07	Inflicts damage and Sleep. 
 MSG_MON_INF_39	Minor non-elemental damage and drains HP from target. Also inflicts Sap. 
 MSG_MON_INF_17	Inflicts Paralyze. Used as a counter. 
 MSG_MON_INF_69	Revives all KO'd allies. 
 MSG_MON_INF_60	Deals damage equal to remaining HP. 
-MSG_MON_INF_46	Deals damage equal to the user's current HP to the entire party, and kills the user.
-MSG_MON_INF_52	Moderate Lightning-elemental damage to the party. 
-MSG_MON_INF_57	Inflicts non-elemental damage equal to 25% of the target's maximum HP. In the 3D version, this ability inflicts heavy Water-elemental damage to the party and has a chance of inflicting Death.
+MSG_MON_INF_46	Deals damage equal to the user's current HP to the entire target, and kills the user.
+MSG_MON_INF_52	Moderate Lightning-elemental damage to the target. 
+MSG_MON_INF_57	Inflicts non-elemental damage equal to 25% of the target's maximum HP.
 MSG_MON_INF_16	Inflicts Pig on an ally. 
-MSG_MON_INF_15	Attempts to inflict Confuse, Toad, Mini, Pig, Silence, and Blind on a single ally, or the entire party when used by Lunasaur.
-MSG_MON_INF_54	Moderate Fire-elemental damage to the party. 
+MSG_MON_INF_15	Attempts to inflict Confuse, Toad, Mini, Pig, Silence, and Blind
+MSG_MON_INF_54	Moderate Fire-elemental damage to the target. 
 MSG_MON_INF_47	Escape from battle. 
 MSG_MON_INF_32	Inflicts Stop. Used as a counter to Lightning-elemental attacks by Armor Constructs. 
 MSG_MON_INF_21	Deals damage equal to remaining HP. 
 MSG_MON_INF_12	Inflicts Gradual Petrify. 
 MSG_MON_INF_11	Inflicts Petrify. 
-MSG_MON_INF_04	Non-elemental damage and Blind to party. 
+MSG_MON_INF_04	Non-elemental damage and Blind to target. 
 MSG_MON_INF_06	Inflicts Confuse. 
 MSG_MON_INF_09	Inflicts Gradual Petrify. 
 MSG_MON_INF_05	Inflicts Confuse. 
 MSG_MON_INF_53	Moderate Lightning-elemental damage. 
-MSG_MON_INF_50	Inflicts major Fire elemental damage to the party. 
-MSG_MON_INF_51	Heavy Ice-elemental damage to the party. 
-MSG_MON_INF_41	Non-elemental damage and Sap on the party. 
+MSG_MON_INF_50	Inflicts major Fire elemental damage to the target. 
+MSG_MON_INF_51	Heavy Ice-elemental damage to the target. 
+MSG_MON_INF_41	Non-elemental damage and Sap on the target. 
 MSG_MON_INF_40	Minor non-elemental damage and inflicts Sap. 
 MSG_MON_INF_30	Inflicts Death. Is Reflectable. 
 MSG_MON_INF_42	Inflicts Death with 100% accuracy. 
-MSG_MON_INF_23	Inflicts Paralyze to the party. 100% accuracy rate. 
-MSG_MON_INF_55	Inflicts non-elemental damage equal to 25% of the target's maximum HP. In the 3D version, this ability inflicts heavy Water-elemental damage to the party and has a chance of inflicting Death.
-MSG_MON_INF_62	Minor Fire-elemental damage to the party, or one party member when used by Armored Fiend (3D).
+MSG_MON_INF_23	Inflicts Paralyze to the target. 100% accuracy rate. 
+MSG_MON_INF_55	Inflicts non-elemental damage equal to 25% of the target's maximum HP.
+MSG_MON_INF_62	Minor Fire-elemental damage to the targets.
 MSG_MON_INF_64	Heavy Fire-elemental damage. 
-MSG_MON_INF_24	Inflicts Sleep to the party. Counter to physical damage. 
-MSG_MON_INF_26	Inflicts damage to the party equal to 1/10 of their max HP. 
-MSG_MON_INF_25	Inflicts Poison and minor non-elemental damage to the party. 
-MSG_MON_INF_48	Inflicts damage to one character, equal to 1/10 of a character's max HP in the 2D version.
+MSG_MON_INF_24	Inflicts Sleep to the target. Counter to physical damage. 
+MSG_MON_INF_26	Inflicts damage to the target equal to 1/10 of their max HP. 
+MSG_MON_INF_25	Inflicts Poison and minor non-elemental damage to the target. 
+MSG_MON_INF_48	Inflicts damage to one target, equal to 1/10 of a character's max HP
 MSG_MON_INF_59	Non elemental damage based on user's current HP. 
-MSG_MON_INF_37	Removes all bad statuses from party. 
+MSG_MON_INF_37	Removes all bad statuses from target. 
 MSG_MON_INF_49	Inflicts extreme non-elemental damage to an ally. 
-MSG_MON_INF_56	Heavy Ice-elemental damage to one or more party members. 
-MSG_MON_INF_65	Extreme non-elemental damage to the party. 
+MSG_MON_INF_56	Heavy Ice-elemental damage to one or more target members. 
+MSG_MON_INF_65	Extreme non-elemental damage to the target. 
 MSG_MON_INF_61	Weaker version of the Quake spell. 
 MSG_MON_INF_13	Moderate non-elemental damage as well as Paralyze and Sap. 
-MSG_MON_INF_31	Reduces party's HP to single digits. Used as a counter by Behemoths to Holy-elemental attacks. 
+MSG_MON_INF_31	Reduces target's HP to single digits. Used as a counter by Behemoths to Holy-elemental attacks. 
 MSG_MON_INF_18	Minor non-elemental damage. 
-MSG_MON_INF_66	Extreme non-elemental damage to the party. 
-MSG_MON_INF_38	Inflicts around 2,300 damage to the party and Sap.
+MSG_MON_INF_66	Extreme non-elemental damage to the target. 
+MSG_MON_INF_38	Inflicts around 2,300 damage to the target and Sap.
 MSG_MON_INF_28	Removes Berserk, Float, Blink (2), Blink (1), Barrier, and Reflect from all allies.
 MSG_MON_INF_36	Restores HP equal to 33% of current HP. 
 MSG_MON_INF_01	1/3 chance of either Confuse, Sleep, or Paralyze. In Lunar Titan's case, inflicts Gradual Petrify.
-MSG_MON_INF_63	Inflicts major Fire-elemental damage to the party. 
+MSG_MON_INF_63	Inflicts major Fire-elemental damage to the target. 
 MSG_MON_INF_03	1/3 chance of Paralyze, Silence, or Curse.
 MSG_MON_INF_02	50% chance of inflicting Paralyze or Death. 
-MSG_MON_INF_14	Inflicts Petrify. Also fully heals target before Petrify (except in the 3D version). 
+MSG_MON_INF_14	Inflicts Petrify. Also fully heals target before Petrify. 
 MSG_MON_INF_35	Restores HP equal to 1/10 of max HP. 
-MSG_MON_INF_10	Inflicts Doom on one ally or the entire party. Is Reflectable. 
+MSG_MON_INF_10	Inflicts Doom on one ally or the entire target. Is Reflectable. 
 MSG_MON_INF_34	Removes Egg status, causing the monster to take on its normal appearance and behavior.
 MSG_MON_INF_44	Calls a monster into the battle. Golbez calls Shadow Dragon. 
 MSG_MON_INF_43	Summons a monster into battle. 

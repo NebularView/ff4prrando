@@ -5,6 +5,7 @@ Created on Mar 18, 2022
 '''
 
 import pandas as pd 
+import json
 import math
 from math import trunc
 import random
@@ -198,7 +199,10 @@ class rando:
             #val = int(val)
             #print(val)
             #print(abilitydata.loc[val, ])
-            abilitydata.at[val, 'type_id'] = int("1")
+            if abilitydata.at[val, 'type_id'] == int("4"):
+                abilitydata.at[val, 'type_id'] = int("4")
+            else:
+                abilitydata.at[val, 'type_id'] = int("1")
             #abilitydata._set_value(val, 'type_id', int('1'))
         #print(abilitydata.dtypes)
         abilitydata.to_csv('output/Master/ability.csv', index=False, encoding='utf-8')
