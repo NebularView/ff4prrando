@@ -4,6 +4,7 @@ Created on Mar 16, 2022
 @author: wreid
 '''
 import pandas as pd 
+import json
 from utilities.dataquery import dataquery
 from utilities.printer import printer
 from utilities.rando import rando
@@ -15,87 +16,128 @@ import re
 import time
 
 if __name__ == '__main__':
-
+   
 
     #prinny = printer()
     #prinny.commandlist()
+    
+    # r1=rando()
+    # r1.weaponpercen()
+    # r1.weaponextras()
+    # r1.armorpercen()
+    # r1.armorextras()
+    ranbool=input("Randomize with default settings? (All) Y/N : ")
+    if ranbool == "Y":
+        conbool="Y"
+        expbool="Y"
+        chabool="Y"
+        abibool="Y"
+        armbool="Y"
+        argbool="Y"
+        weabool="Y"
+        wegbool="Y"
+        leabool="Y"
+        monbool="Y"
+        mncbool="Y"
+        chebool="Y"
+    else:    
+        conbool=input("Adjust constants for higher maximum statistic caps and item stacks? Y/N : ")
+        expbool=input("Adjust needed exp for leveling? Y/N : ")
+        chabool=input("Adjust character growths? Y/N : ")
+        abibool=input("Adjust ability strengths and mana costs? Y/N : ")
+        armbool=input("Adjust armor strengths, stats, and costs? Y/N : ")
+        if armbool == "Y":
+            argbool=input("Adjust armor elements, procs, and group effectiveness? Y/N : ")
+        else:
+            argbool="N"
+        weabool=input("Adjust weapon strengths, stats, and costs? Y/N : ")
+        if weabool == "Y":
+            wegbool=input("Adjust weapon elements, attributes and group effectiveness? Y/N : ")
+        else:
+            wegbool="N"
+        leabool=input("Adjust commands and spell capabilities? Y/N : ")
+        monbool=input("Adjust monster drops and steals? Y/N : ")
+        mncbool=input("Adjust monster command descriptions? Y/N : ")
+        chebool=input("Adjust chest contents? (Currently completely random and new) Y/N : ")
+    
+    
+    
  
     print("Validating output directories")
-    path = 'output/Master'
+    path = 'output/data/GameAssets/Serial/Data/Master'
     isExist = os.path.exists(path)    
     if not isExist:
         os.makedirs(path)
     
-    path = 'output/Message'
+    path = 'output/data/GameAssets/Serial/Data/Message'
     isExist = os.path.exists(path)    
     if not isExist:
         os.makedirs(path)
     print("Complete")
     r1=rando()
-    print("Adjusting constants")
-    r1.constadjust()
-    print("Complete")
     
-    print("Adjusting EXP values")
-    r1.expfix()
-    print("Complete")
+    
+    if conbool == "Y":
+        print("Adjusting constants")
+        r1.constadjust()
+        print("Complete")
+    
+    if expbool == "Y":
+        print("Adjusting EXP values")
+        r1.expfix()
+        print("Complete")
     
     #r1.growthflat(hpbot="40", hptop="101", mpbot="2", mptop="80", strbot="0", strtop="3", vitbot="0", vittop="3", agibot="0", agitop="3", intbot="0", inttop="3", spibot="0", spitop="3", magbot="0", magtop="3", lukbot="0", luktop="3")
-    print("Adjusting growths")
-    r1.growthset()
-    print("Complete")
+    if chabool == "Y":
+        print("Adjusting growths")
+        r1.growthset()
+        print("Complete")
     
-    print("Adjusting ability strengths and mana")
-    r1.abilitypercen()
-    print("Complete")
+    if abibool == "Y":
+        print("Adjusting ability strengths and mana")
+        r1.abilitypercen()
+        print("Complete")
     
-    print("Adjusting armor strengths, stats, and costs")
-    r1.armorpercen()
-    print("Complete")
-    
-    print("Adjusting weapon strengths, stats, and costs")
-    r1.weaponpercen()
-    print("Complete")
-    
-    print("Adjusting commands and spell capabilities")
-    r1.learning()
-    print("Complete")
-    
-    print("Adjusting monster command descriptions")
-    r1.monskillfix()
-    print("Complete")
+    if armbool == "Y":
+        print("Adjusting armor strengths, stats, and costs")
+        r1.armorpercen()
+        print("Complete")
 
-    # systemdata = pd.read_csv("output/Message/system_en.txt", delimiter='\t', names=['id', 'value'], encoding='utf-8')
-    # monskilldata = pd.read_csv("Data/mon_skills.csv")
-    # contentdata = pd.read_csv("output/Master/content.csv", encoding='utf-8')
-    # print(contentdata["mes_id_description"])
-    # print(contentdata["mes_id_name"])
-    # cq=contentdata.query('mes_id_name.str.contains("MON")', engine="python")
-    #
-    # for id, row in cq.iterrows():
-    #     desnameinit =  row["mes_id_name"]
-    #     desname = re.sub("ATK", "INF", desnameinit)
-    #     rowfind = contentdata.query('id == @row["id"]')
-    #     rowid = rowfind["id"].index
-    #     contentdata.loc[rowid,'mes_id_description'] = desname
-    #     query1 = dataquery(row["mes_id_name"])
-    #     output1 = query1.sysdataquery()
-    #     query2 = monskilldata.query('Name.str.contains(@output1)')
-    #     query2 = query2.head(1)
-    #     if query2.empty == False:
-    #         desvalue = query2['Description'].item()
-    #         new_row = {'id':desname, 'value':desvalue}
-    #         systemdata = systemdata.append([new_row], ignore_index = True)
-    # systemdata = systemdata.drop_duplicates()
-    # systemdata.to_csv('output/Message/system_en.txt', index=False, header=False, sep='\t', encoding='utf-8', mode='w+')
-    # contentdata.to_csv('output/Master/content.csv', index=False, encoding='utf-8')
-    #
-    # # time.sleep(5)
-    # #
-    # # print("Adjusting monster command descriptions")
-    # # r1.monskillfix()
-    # # print("Complete")
+    if argbool == "Y":
+        print("Adjusting armor elements, procs, and group effectiveness")
+        r1.armorextras()
+        print("Complete")
+
+    if weabool == "Y":    
+        print("Adjusting weapon strengths, stats, and costs")
+        r1.weaponpercen()
+        print("Complete")
+
+    if wegbool == "Y":
+        print("Adjusting weapon elements, attributes and group effectiveness")
+        r1.weaponextras()
+        print("Complete")
     
-    print("Randomization complete!")
+    if leabool == "Y":
+        print("Adjusting commands and spell capabilities")
+        r1.learning()
+        print("Complete")
+
+    if monbool == "Y":
+        print("Adjusting monster command descriptions")
+        r1.monskillfix()
+        print("Complete")
+    
+    if mncbool == "Y":
+        print("Adjusting monster drops and steals")
+        r1.monskillfix()
+        print("Complete")
+    
+    if chebool == "Y":
+        print("Adjusting chest contents")
+        r1.chests()
+        print("Complete")
+    
+    print("Randomization complete, Please check output directory!")
 
     pass
