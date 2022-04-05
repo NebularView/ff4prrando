@@ -26,7 +26,7 @@ if __name__ == '__main__':
     # r1.weaponextras()
     # r1.armorpercen()
     # r1.armorextras()
-    ranbool=input("Randomize with default settings? (All) Y/N : ")
+    ranbool=input("Randomize with default settings? (All) Y/N : ").upper()
     if ranbool == "Y":
         conbool="Y"
         expbool="Y"
@@ -41,24 +41,24 @@ if __name__ == '__main__':
         mncbool="Y"
         chebool="Y"
     else:    
-        conbool=input("Adjust constants for higher maximum statistic caps and item stacks? Y/N : ")
-        expbool=input("Adjust needed exp for leveling? Y/N : ")
-        chabool=input("Adjust character growths? Y/N : ")
-        abibool=input("Adjust ability strengths and mana costs? Y/N : ")
-        armbool=input("Adjust armor strengths, stats, and costs? Y/N : ")
+        conbool=input("Adjust constants for higher maximum statistic caps and item stacks? Y/N : ").upper()
+        expbool=input("Adjust needed exp for leveling? Y/N : ").upper()
+        chabool=input("Adjust character growths? Y/N : ").upper()
+        abibool=input("Adjust ability strengths and mana costs? Y/N : ").upper()
+        armbool=input("Adjust armor strengths, stats, and costs? Y/N : ").upper()
         if armbool == "Y":
-            argbool=input("Adjust armor elements, procs, and group effectiveness? Y/N : ")
+            argbool=input("Adjust armor elements, procs, and group effectiveness? Y/N : ").upper()
         else:
             argbool="N"
-        weabool=input("Adjust weapon strengths, stats, and costs? Y/N : ")
+        weabool=input("Adjust weapon strengths, stats, and costs? Y/N : ").upper()
         if weabool == "Y":
-            wegbool=input("Adjust weapon elements, attributes and group effectiveness? Y/N : ")
+            wegbool=input("Adjust weapon elements, attributes and group effectiveness? Y/N : ").upper()
         else:
             wegbool="N"
-        leabool=input("Adjust commands and spell capabilities? Y/N : ")
-        monbool=input("Adjust monster drops and steals? Y/N : ")
-        mncbool=input("Adjust monster command descriptions? Y/N : ")
-        chebool=input("Adjust chest contents? (Currently completely random and new) Y/N : ")
+        leabool=input("Adjust commands and spell capabilities? Y/N : ").upper()
+        monbool=input("Adjust monster drops and steals? Y/N : ").upper()
+        mncbool=input("Adjust monster command descriptions? Y/N : ").upper()
+        chebool=input("Adjust chest contents? (Currently completely random and new) Y/N : ").upper()
     
     
     
@@ -130,7 +130,7 @@ if __name__ == '__main__':
     
     if mncbool == "Y":
         print("Adjusting monster drops and steals")
-        r1.monskillfix()
+        r1.monsterdrops()
         print("Complete")
     
     if chebool == "Y":
