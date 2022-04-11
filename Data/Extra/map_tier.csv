@@ -1,0 +1,354 @@
+id,map_name,PlainTxt_Map,PT_title,PT_area_id,map_title,bgm_id,area_id,PT_BGM,tier
+1,Map_10010,Overworld,,Overworld,None,6,1,Welcome to Our Town!,0
+2,Map_10020,Underworld,,Underworld,None,33,2,Somewhere In the World�,0
+3,Map_10030,Moon,,Moon,None,39,3,Lunar Whale,0
+4,Map_20010_1,Castle Baron,,Castle Baron,None,2,4,The Red Wings,1
+5,Map_20011_1,Castle Baron - 1F,1F,Castle Baron,MSGARA_NAME_20,2,4,The Red Wings,1
+6,Map_20011_2,Castle Baron - 2F,2F,Castle Baron,MSGARA_NAME_21,2,4,The Red Wings,1
+7,Map_20011_3,Castle Baron - 2F,2F,Castle Baron,MSGARA_NAME_21,2,4,The Red Wings,1
+8,Map_20011_4,Castle Baron - Throne Room,Throne Room,Castle Baron,MSGARA_NAME_37,2,4,The Red Wings,1
+9,Map_20011_5,Castle Baron - 1F,1F,Castle Baron,MSGARA_NAME_20,2,4,The Red Wings,1
+10,Map_20011_6,Castle Baron - 1F,1F,Castle Baron,MSGARA_NAME_20,2,4,The Red Wings,1
+11,Map_20011_7,Castle Baron - Dungeon,Dungeon,Castle Baron,MSGARA_NAME_42,2,4,The Red Wings,1
+12,Map_20011_8,Castle Baron - 1F,1F,Castle Baron,MSGARA_NAME_20,2,4,The Red Wings,1
+13,Map_20011_9,Castle Baron - West Tower 1F,West Tower 1F,Castle Baron,MSGARA_NAME_11,2,4,The Red Wings,1
+14,Map_20011_10,Castle Baron - West Tower 2F,West Tower 2F,Castle Baron,MSGARA_NAME_12,2,4,The Red Wings,1
+15,Map_20011_11,Castle Baron - (CECIL)'s Chamber,(CECIL)'s Chamber,Castle Baron,MSG_MAP_NAME_42,2,4,The Red Wings,1
+16,Map_20011_12,Castle Baron - 1F,1F,Castle Baron,MSGARA_NAME_20,2,4,The Red Wings,2
+17,Map_20011_13,Castle Baron - East Tower 1F,East Tower 1F,Castle Baron,MSGARA_NAME_14,2,4,The Red Wings,2
+18,Map_20011_14,Castle Baron - East Tower 2F,East Tower 2F,Castle Baron,MSGARA_NAME_15,2,4,The Red Wings,2
+19,Map_20011_15,Castle Baron - East Tower 3F,East Tower 3F,Castle Baron,MSGARA_NAME_16,2,4,The Red Wings,2
+20,Map_20011_16,Castle Baron - East Tower B1,East Tower B1,Castle Baron,MSGARA_NAME_17,2,4,The Red Wings,2
+21,Map_20011_17,Castle Baron - East Tower B2,East Tower B2,Castle Baron,MSGARA_NAME_18,2,4,The Red Wings,2
+22,Map_20011_18,Castle Baron - Black Magic Research Lab,Black Magic Research Lab,Castle Baron,MSG_MAP_NAME_43,2,4,The Red Wings,2
+23,Map_20011_19,Castle Baron - White Magic Research Lab,White Magic Research Lab,Castle Baron,MSG_MAP_NAME_44,2,4,The Red Wings,2
+24,Map_20020,Town of Baron,,Town of Baron,None,5,5,Prologue,1
+25,Map_20021_1,Town of Baron - Inn,Inn,Town of Baron,MSGARA_NAME_01,5,5,Prologue,1
+26,Map_20021_2,Town of Baron - Item Shop,Item Shop,Town of Baron,MSGARA_NAME_05,5,5,Prologue,1
+27,Map_20021_3,Town of Baron - (CID)'s House,(CID)'s House,Town of Baron,MSG_MAP_NAME_45,5,5,Prologue,1
+28,Map_20021_4,Town of Baron - (ROZA)'s House,(ROZA)'s House,Town of Baron,MSG_MAP_NAME_46,5,5,Prologue,1
+29,Map_20021_5,Town of Baron - Devil's Road,Devil's Road,Town of Baron,MSGARA_NAME_10,5,5,Prologue,1
+30,Map_20021_6,Town of Baron - Training Room,Training Room,Town of Baron,MSG_MAP_NAME_47,5,5,Prologue,1
+31,Map_20021_7,Town of Baron - Armor & Weapons Shop,Armor & Weapons Shop,Town of Baron,MSGARA_NAME_08,5,5,Prologue,4
+32,Map_20030,"Kaipo, Oasis of the Desert",,"Kaipo, Oasis of the Desert",None,5,7,Prologue,2
+33,Map_20031_1,"Kaipo, Oasis of the Desert - Weapon Shop",Weapon Shop,"Kaipo, Oasis of the Desert",MSGARA_NAME_06,5,7,Prologue,2
+34,Map_20031_2,"Kaipo, Oasis of the Desert - Inn & Item Shop",Inn & Item Shop,"Kaipo, Oasis of the Desert",MSGARA_NAME_04,5,7,Prologue,2
+35,Map_20031_3,"Kaipo, Oasis of the Desert - Pub",Pub,"Kaipo, Oasis of the Desert",MSGARA_NAME_02,5,7,Prologue,2
+36,Map_20031_4,"Kaipo, Oasis of the Desert - Armor Shop",Armor Shop,"Kaipo, Oasis of the Desert",MSGARA_NAME_07,5,7,Prologue,2
+37,Map_20031_5,"Kaipo, Oasis of the Desert",,"Kaipo, Oasis of the Desert",None,5,7,Prologue,2
+38,Map_20040,Damcyan Castle,,Damcyan Castle,None,15,8,Rydia,2
+39,Map_20041_1,Damcyan Castle - 1F,1F,Damcyan Castle,MSGARA_NAME_20,15,8,Rydia,2
+40,Map_20041_2,Damcyan Castle - 2F,2F,Damcyan Castle,MSGARA_NAME_21,15,8,Rydia,2
+41,Map_20041_3,Damcyan Castle - 3F,3F,Damcyan Castle,MSGARA_NAME_22,15,8,Rydia,2
+42,Map_20041_4,Damcyan Castle - Jail,Jail,Damcyan Castle,MSGARA_NAME_55,15,8,Rydia,2
+43,Map_20041_5,Damcyan Castle - Jail B1,Jail B1,Damcyan Castle,MSGARA_NAME_56,15,8,Rydia,2
+44,Map_20050_1,Fabul Castle,,Fabul Castle,None,19,9,Mt. Ordeals,2
+45,Map_20051_1,Fabul Castle - 1F,1F,Fabul Castle,MSGARA_NAME_20,19,9,Mt. Ordeals,2
+46,Map_20051_2,Fabul Castle - 2F,2F,Fabul Castle,MSGARA_NAME_21,19,9,Mt. Ordeals,2
+47,Map_20051_3,Fabul Castle - Throne Room,Throne Room,Fabul Castle,MSGARA_NAME_37,19,9,Mt. Ordeals,2
+48,Map_20051_4,Fabul Castle - Crystal Room,Crystal Room,Fabul Castle,MSGARA_NAME_09,69,9,The Prelude,2
+49,Map_20051_5,Fabul Castle - Inn & Item Shop,Inn & Item Shop,Fabul Castle,MSGARA_NAME_04,19,9,Mt. Ordeals,2
+50,Map_20051_6,Fabul Castle - Armor & Weapons Shop,Armor & Weapons Shop,Fabul Castle,MSGARA_NAME_08,19,9,Mt. Ordeals,2
+51,Map_20051_7,Fabul Castle - West Tower 1F,West Tower 1F,Fabul Castle,MSGARA_NAME_11,19,9,Mt. Ordeals,2
+52,Map_20051_8,Fabul Castle - West Tower 2F,West Tower 2F,Fabul Castle,MSGARA_NAME_12,19,9,Mt. Ordeals,2
+53,Map_20051_9,Fabul Castle - West Tower 3F,West Tower 3F,Fabul Castle,MSGARA_NAME_13,19,9,Mt. Ordeals,2
+54,Map_20051_10,Fabul Castle - East Tower 1F,East Tower 1F,Fabul Castle,MSGARA_NAME_14,19,9,Mt. Ordeals,2
+55,Map_20051_11,Fabul Castle - East Tower 2F,East Tower 2F,Fabul Castle,MSGARA_NAME_15,19,9,Mt. Ordeals,2
+56,Map_20051_12,Fabul Castle - East Tower 3F,East Tower 3F,Fabul Castle,MSGARA_NAME_16,19,9,Mt. Ordeals,2
+57,Map_20060,Mysidia,,Mysidia,None,24,10,"Hey, Cid!",3
+58,Map_20061_1,Mysidia - Manor of Prayers,Manor of Prayers,Mysidia,MSG_MAP_NAME_48,24,10,"Hey, Cid!",3
+59,Map_20061_2,Mysidia - Crystal Room,Crystal Room,Mysidia,MSGARA_NAME_09,69,10,The Prelude,3
+60,Map_20061_3,Mysidia - Tower of Worship,Tower of Worship,Mysidia,MSG_MAP_NAME_87,25,10,Mystic Mysidia,3
+61,Map_20061_4,Mysidia - Weapon Shop,Weapon Shop,Mysidia,MSGARA_NAME_06,24,10,"Hey, Cid!",3
+62,Map_20061_5,Mysidia - Armor Shop,Armor Shop,Mysidia,MSGARA_NAME_07,24,10,"Hey, Cid!",3
+63,Map_20061_6,Mysidia - Pub,Pub,Mysidia,MSGARA_NAME_02,24,10,"Hey, Cid!",3
+64,Map_20061_7,Mysidia - Inn,Inn,Mysidia,MSGARA_NAME_01,24,10,"Hey, Cid!",3
+65,Map_20061_8,Mysidia - Item Shop,Item Shop,Mysidia,MSGARA_NAME_05,24,10,"Hey, Cid!",3
+66,Map_20061_9,Mysidia - Devil's Road,Devil's Road,Mysidia,MSGARA_NAME_10,24,10,"Hey, Cid!",3
+67,Map_20070_1,Mist,,Mist,None,5,6,Prologue,4
+68,Map_20071_1,Mist - Weapon Shop,Weapon Shop,Mist,MSGARA_NAME_06,5,6,Prologue,4
+69,Map_20071_2,Mist - Armor Shop,Armor Shop,Mist,MSGARA_NAME_07,5,6,Prologue,4
+70,Map_20071_3,Mist - Inn,Inn,Mist,MSGARA_NAME_01,5,6,Prologue,4
+71,Map_20071_4,Mist,,Mist,None,5,6,Prologue,4
+72,Map_20080,Mythril,,Mythril,None,5,16,Prologue,4
+73,Map_20081_1,Mythril - Weapon Shop,Weapon Shop,Mythril,MSGARA_NAME_06,5,16,Prologue,4
+74,Map_20081_2,Mythril - Armor Shop,Armor Shop,Mythril,MSGARA_NAME_07,5,16,Prologue,4
+75,Map_20081_3,Mythril - Inn,Inn,Mythril,MSGARA_NAME_01,5,16,Prologue,4
+76,Map_20081_4,Mythril - Item Shop,Item Shop,Mythril,MSGARA_NAME_05,5,16,Prologue,4
+77,Map_20090,Eblan Castle,,Eblan Castle,None,15,14,Rydia,5
+78,Map_20091_1,Eblan Castle - 1F,1F,Eblan Castle,MSGARA_NAME_20,15,14,Rydia,5
+79,Map_20091_2,Eblan Castle - 2F,2F,Eblan Castle,MSGARA_NAME_21,15,14,Rydia,5
+80,Map_20091_3,Eblan Castle - Throne Room,Throne Room,Eblan Castle,MSGARA_NAME_37,15,14,Rydia,5
+81,Map_20091_4,Eblan Castle - West Tower 1F,West Tower 1F,Eblan Castle,MSGARA_NAME_11,15,14,Rydia,5
+82,Map_20091_5,Eblan Castle - West Tower 2F,West Tower 2F,Eblan Castle,MSGARA_NAME_12,15,14,Rydia,5
+83,Map_20091_6,Eblan Castle - East Tower 1F,East Tower 1F,Eblan Castle,MSGARA_NAME_14,15,14,Rydia,5
+84,Map_20091_7,Eblan Castle - East Tower 2F,East Tower 2F,Eblan Castle,MSGARA_NAME_15,15,14,Rydia,5
+85,Map_20091_8,Eblan Castle - Underground Passage,Underground Passage,Eblan Castle,MSGARA_NAME_41,15,14,Rydia,5
+86,Map_20100,Town of Troia,,Town of Troia,None,5,12,Prologue,5
+87,Map_20101_1,Town of Troia - Weapon Shop,Weapon Shop,Town of Troia,MSGARA_NAME_06,5,12,Prologue,5
+88,Map_20101_2,Town of Troia - Armor Shop,Armor Shop,Town of Troia,MSGARA_NAME_07,5,12,Prologue,5
+89,Map_20101_3,Town of Troia - Item Shop,Item Shop,Town of Troia,MSGARA_NAME_05,5,12,Prologue,5
+90,Map_20101_4,Town of Troia - Inn,Inn,Town of Troia,MSGARA_NAME_01,5,12,Prologue,5
+91,Map_20101_5,Town of Troia - Pub,Pub,Town of Troia,MSGARA_NAME_02,5,12,Prologue,5
+92,Map_20101_6,Town of Troia - Pub 2F,Pub 2F,Town of Troia,MSGARA_NAME_03,5,12,Prologue,5
+93,Map_20101_7,Town of Troia - King's Pub,King's Pub,Town of Troia,MSG_MAP_NAME_49,5,12,Prologue,5
+94,Map_20101_8,Town of Troia - Black Chocobo Farm,Black Chocobo Farm,Town of Troia,MSG_MAP_NAME_50,5,12,Prologue,5
+95,Map_20101_9,Town of Troia - Chocobo Farm B1,Chocobo Farm B1,Town of Troia,MSG_MAP_NAME_51,51,12,Chocobo Forest,5
+96,Map_20110_1,Troia Castle,,Troia Castle,None,29,11,The Airship,5
+97,Map_20111_1,Troia Castle - 1F,1F,Troia Castle,MSGARA_NAME_20,29,11,The Airship,5
+98,Map_20111_2,Troia Castle - 2F,2F,Troia Castle,MSGARA_NAME_21,29,11,The Airship,5
+99,Map_20111_3,Troia Castle - Crystal Room,Crystal Room,Troia Castle,MSGARA_NAME_09,69,11,The Prelude,5
+100,Map_20111_4,Troia Castle,,Troia Castle,None,29,11,The Airship,5
+101,Map_20111_5,Troia Castle - 1F,1F,Troia Castle,MSGARA_NAME_20,29,11,The Airship,5
+102,Map_20111_6,Troia Castle - B1,B1,Troia Castle,MSGARA_NAME_27,29,11,The Airship,5
+103,Map_20111_7,Troia Castle - B1,B1,Troia Castle,MSGARA_NAME_27,29,11,The Airship,5
+104,Map_20111_8,Troia Castle - Jail B1,Jail B1,Troia Castle,MSGARA_NAME_56,29,11,The Airship,5
+105,Map_20111_9,Troia Castle - B2,B2,Troia Castle,MSGARA_NAME_28,29,11,The Airship,5
+106,Map_20120,Agart,,Agart,None,5,13,Prologue,5
+107,Map_20121_1,Agart - Observatory,Observatory,Agart,MSG_MAP_NAME_52,5,13,Prologue,5
+108,Map_20121_2,Agart - Observation Room,Observation Room,Agart,MSG_MAP_NAME_53,5,13,Prologue,5
+109,Map_20121_3,Agart,,Agart,None,5,13,Prologue,5
+110,Map_20121_4,Agart - Inn & Item Shop,Inn & Item Shop,Agart,MSGARA_NAME_04,5,13,Prologue,5
+111,Map_20121_5,Agart - Weapon Shop,Weapon Shop,Agart,MSGARA_NAME_06,5,13,Prologue,5
+112,Map_20121_6,Agart - Armor Shop,Armor Shop,Agart,MSGARA_NAME_07,5,13,Prologue,5
+113,Map_20131_1,Eblan Settlement,,Eblan Settlement,None,11,15,Chocobo Chocobo,6
+114,Map_20131_2,Eblan Settlement - Inn & Item Shop,Inn & Item Shop,Eblan Settlement,MSGARA_NAME_04,11,15,Chocobo Chocobo,6
+115,Map_20131_3,Eblan Settlement - Armor & Weapons Shop,Armor & Weapons Shop,Eblan Settlement,MSGARA_NAME_08,11,15,Chocobo Chocobo,6
+116,Map_20131_4,Eblan Settlement - B2,B2,Eblan Settlement,MSGARA_NAME_28,11,15,Chocobo Chocobo,6
+117,Map_20141_1,Adamant Grotto,,Adamant Grotto,None,11,17,Chocobo Chocobo,6
+118,Map_20150,Dwarven Castle,,Dwarven Castle,None,34,39,Land of Dwarves,5
+119,Map_20151_1,Dwarven Castle - 1F,1F,Dwarven Castle,MSGARA_NAME_20,34,39,Land of Dwarves,5
+120,Map_20151_2,Dwarven Castle - Throne Room,Throne Room,Dwarven Castle,MSGARA_NAME_37,34,39,Land of Dwarves,5
+121,Map_20151_3,Dwarven Castle - Inn & Item Shop,Inn & Item Shop,Dwarven Castle,MSGARA_NAME_04,34,39,Land of Dwarves,5
+122,Map_20151_4,Dwarven Castle - West Tower 1F,West Tower 1F,Dwarven Castle,MSGARA_NAME_11,34,39,Land of Dwarves,5
+123,Map_20151_5,Dwarven Castle - West Tower 2F,West Tower 2F,Dwarven Castle,MSGARA_NAME_12,34,39,Land of Dwarves,5
+124,Map_20151_6,Dwarven Castle - West Tower 3F,West Tower 3F,Dwarven Castle,MSGARA_NAME_13,34,39,Land of Dwarves,5
+125,Map_20151_7,Dwarven Castle - B1,B1,Dwarven Castle,MSGARA_NAME_27,34,39,Land of Dwarves,5
+126,Map_20151_8,Dwarven Castle,,Dwarven Castle,None,34,39,Land of Dwarves,5
+127,Map_20151_9,Dwarven Castle - B2,B2,Dwarven Castle,MSGARA_NAME_28,34,39,Land of Dwarves,5
+128,Map_20151_10,Dwarven Base,,Dwarven Base,None,34,40,Land of Dwarves,5
+129,Map_20151_11,Dwarven Castle - Armor & Weapons Shop,Armor & Weapons Shop,Dwarven Castle,MSGARA_NAME_08,34,39,Land of Dwarves,5
+130,Map_20151_12,Dwarven Castle - East Tower 1F,East Tower 1F,Dwarven Castle,MSGARA_NAME_14,34,39,Land of Dwarves,5
+131,Map_20151_13,Dwarven Castle - East Tower 2F,East Tower 2F,Dwarven Castle,MSGARA_NAME_15,34,39,Land of Dwarves,5
+132,Map_20151_14,Dwarven Castle - East Tower 3F,East Tower 3F,Dwarven Castle,MSGARA_NAME_16,34,39,Land of Dwarves,5
+133,Map_20151_15,Dwarven Castle - Lali-ho Pub,Lali-ho Pub,Dwarven Castle,MSG_MAP_NAME_55,34,39,Land of Dwarves,5
+134,Map_20160,Land of Summons,,Land of Summons,None,37,42,Tower of Zot,6
+135,Map_20161_1,Land of Summons - Hidden Chamber,Hidden Chamber,Land of Summons,MSGARA_NAME_19,37,42,Tower of Zot,6
+136,Map_20161_2,Land of Summons,,Land of Summons,None,37,42,Tower of Zot,6
+137,Map_20161_3,Land of Summons - Inn & Item Shop,Inn & Item Shop,Land of Summons,MSGARA_NAME_04,37,42,Tower of Zot,6
+138,Map_20161_4,Land of Summons,,Land of Summons,None,37,42,Tower of Zot,6
+139,Map_20161_5,Land of Summons - Weapon Shop,Weapon Shop,Land of Summons,MSGARA_NAME_06,37,42,Tower of Zot,6
+140,Map_20161_6,Land of Summons - Armor Shop,Armor Shop,Land of Summons,MSGARA_NAME_07,37,42,Tower of Zot,6
+141,Map_20161_7,Land of Summons - Library,Library,Land of Summons,MSG_MAP_NAME_62,37,42,Tower of Zot,6
+142,Map_20161_8,Land of Summons - B1,B1,Land of Summons,MSGARA_NAME_27,37,42,Tower of Zot,6
+143,Map_20161_9,Land of Summons - Throne Room,Throne Room,Land of Summons,MSGARA_NAME_37,37,42,Tower of Zot,6
+144,Map_20170,Tomra,,Tomra,None,5,41,Prologue,6
+145,Map_20171_1,Tomra - Item Shop,Item Shop,Tomra,MSGARA_NAME_05,5,41,Prologue,6
+146,Map_20171_2,Tomra - Inn,Inn,Tomra,MSGARA_NAME_01,5,41,Prologue,6
+147,Map_20171_3,Tomra - Armor & Weapons Shop,Armor & Weapons Shop,Tomra,MSGARA_NAME_08,5,41,Prologue,6
+148,Map_20171_4,Tomra,,Tomra,None,5,41,Prologue,6
+149,Map_20180,Kokkol's Smithy,,Kokkol's Smithy,None,5,44,Prologue,6
+150,Map_20181_1,Kokkol's Smithy - 1F,1F,Kokkol's Smithy,MSGARA_NAME_20,5,44,Prologue,6
+151,Map_20181_2,Kokkol's Smithy - 2F,2F,Kokkol's Smithy,MSGARA_NAME_21,5,44,Prologue,6
+152,Map_20191_1,Hummingway Home,,Hummingway Home,None,5,50,Prologue,9
+153,Map_20201_1,Crystal Palace,,Crystal Palace,None,69,49,The Prelude,8
+154,Map_20201_2,Crystal Palace - 2F,2F,Crystal Palace,MSGARA_NAME_21,69,49,The Prelude,8
+155,Map_20210_1,"Chocobo Forest, Baron Area",,"Chocobo Forest, Baron Area",None,51,19,Chocobo Forest,2
+156,Map_20210_2,"Chocobo Forest, Fabul Area",,"Chocobo Forest, Fabul Area",None,51,20,Chocobo Forest,3
+157,Map_20210_3,"Chocobo Forest, Mysidia Area",,"Chocobo Forest, Mysidia Area",None,51,21,Chocobo Forest,4
+158,Map_20210_4,"Chocobo Forest, Troia Area",,"Chocobo Forest, Troia Area",None,51,22,Chocobo Forest,5
+159,Map_20210_5,"Chocobo Forest, Southern Island",,"Chocobo Forest, Southern Island",None,51,23,Chocobo Forest,6
+160,Map_20220,Chocobo Village,,Chocobo Village,None,51,18,Chocobo Forest,6
+161,Map_20271_1,Lunar Whale,,Lunar Whale,None,38,57,The Land of Summons,0
+162,Map_30011_1,Mist Cave,,Mist Cave,None,11,24,Chocobo Chocobo,1
+163,Map_30021_1,Underground Waterway,,Underground Waterway,None,11,26,Chocobo Chocobo,1
+164,Map_30021_2,Underground Waterway - Hidden Chamber,Hidden Chamber,Underground Waterway,MSGARA_NAME_19,11,26,Chocobo Chocobo,1
+165,Map_30021_3,Underground Waterway - Underground Waterway,Underground Waterway,Underground Waterway,MSG_MAP_NAME_24,11,26,Chocobo Chocobo,1
+166,Map_30021_4,Underground Waterway - Underground Waterway,Underground Waterway,Underground Waterway,MSG_MAP_NAME_24,11,26,Chocobo Chocobo,1
+167,Map_30021_5,Underground Waterway - Underground Waterway,Underground Waterway,Underground Waterway,MSG_MAP_NAME_24,11,26,Chocobo Chocobo,1
+168,Map_30021_6,Underground Waterway - Underground Waterway,Underground Waterway,Underground Waterway,MSG_MAP_NAME_24,11,26,Chocobo Chocobo,1
+169,Map_30021_7,Underground Waterway,,Underground Waterway,None,11,26,Chocobo Chocobo,1
+170,Map_30021_8,Subterranean Lake,,Subterranean Lake,None,11,28,Chocobo Chocobo,1
+171,Map_30021_9,Subterranean Lake - B2,B2,Subterranean Lake,MSGARA_NAME_28,11,28,Chocobo Chocobo,1
+172,Map_30021_10,Subterranean Lake - B1,B1,Subterranean Lake,MSGARA_NAME_27,11,28,Chocobo Chocobo,1
+173,Map_30031_1,Antlion Cave - B1,B1,Antlion Cave,MSGARA_NAME_27,11,30,Chocobo Chocobo,2
+174,Map_30031_2,Antlion Cave - B1,B1,Antlion Cave,MSGARA_NAME_27,11,30,Chocobo Chocobo,2
+175,Map_30031_3,Antlion Cave - B2,B2,Antlion Cave,MSGARA_NAME_28,11,30,Chocobo Chocobo,2
+176,Map_30031_4,Antlion Cave - B2,B2,Antlion Cave,MSGARA_NAME_28,11,30,Chocobo Chocobo,2
+177,Map_30031_5,Antlion Cave - Antlion Nest,Antlion Nest,Antlion Cave,MSG_MAP_NAME_59,11,30,Chocobo Chocobo,2
+178,Map_30040,Mt. Hobs,,Mt. Hobs,None,18,31,Edward's Harp,2
+179,Map_30050,Mt. Hobs - Trail,Trail,Mt. Hobs,MSGARA_NAME_57,18,31,Edward's Harp,2
+180,Map_30060,Mt. Hobs - Summit,Summit,Mt. Hobs,MSGARA_NAME_38,18,31,Edward's Harp,2
+181,Map_30070,Mt. Hobs,,Mt. Hobs,None,18,31,Edward's Harp,2
+182,Map_30080,Mt. Ordeals - Entrance,Entrance,Mt. Ordeals,MSGARA_NAME_53,18,33,Edward's Harp,3
+183,Map_30090,Mt. Ordeals - Ridge,Ridge,Mt. Ordeals,MSGARA_NAME_34,18,33,Edward's Harp,3
+184,Map_30100,Mt. Ordeals - Pass,Pass,Mt. Ordeals,MSGARA_NAME_35,18,33,Edward's Harp,3
+185,Map_30110,Mt. Ordeals - Summit,Summit,Mt. Ordeals,MSGARA_NAME_38,18,33,Edward's Harp,3
+186,Map_30121_1,Old Waterway - B4,B4,Old Waterway,MSGARA_NAME_30,11,34,Chocobo Chocobo,3
+187,Map_30121_2,Old Waterway - B3,B3,Old Waterway,MSGARA_NAME_29,11,34,Chocobo Chocobo,3
+188,Map_30121_3,Old Waterway - B2,B2,Old Waterway,MSGARA_NAME_28,11,34,Chocobo Chocobo,3
+189,Map_30121_4,Old Waterway - B1,B1,Old Waterway,MSGARA_NAME_27,11,34,Chocobo Chocobo,3
+190,Map_30121_5,Old Waterway - B1,B1,Old Waterway,MSGARA_NAME_27,11,34,Chocobo Chocobo,4
+192,Map_30131_1,Magnetic Cavern - B1,B1,Magnetic Cavern,MSGARA_NAME_27,11,35,Chocobo Chocobo,4
+193,Map_30131_2,Magnetic Cavern - B2,B2,Magnetic Cavern,MSGARA_NAME_28,11,35,Chocobo Chocobo,4
+194,Map_30131_3,Magnetic Cavern - B2,B2,Magnetic Cavern,MSGARA_NAME_28,11,35,Chocobo Chocobo,4
+195,Map_30131_4,Magnetic Cavern - B3,B3,Magnetic Cavern,MSGARA_NAME_29,11,35,Chocobo Chocobo,4
+196,Map_30131_5,Magnetic Cavern - B3,B3,Magnetic Cavern,MSGARA_NAME_29,11,35,Chocobo Chocobo,4
+197,Map_30131_6,Magnetic Cavern - B3,B3,Magnetic Cavern,MSGARA_NAME_29,11,35,Chocobo Chocobo,4
+198,Map_30131_7,Magnetic Cavern - B3,B3,Magnetic Cavern,MSGARA_NAME_29,11,35,Chocobo Chocobo,4
+199,Map_30131_8,Magnetic Cavern - B4,B4,Magnetic Cavern,MSGARA_NAME_30,11,35,Chocobo Chocobo,4
+200,Map_30131_9,Magnetic Cavern - B4,B4,Magnetic Cavern,MSGARA_NAME_30,11,35,Chocobo Chocobo,4
+201,Map_30131_10,Magnetic Cavern - Crystal Room,Crystal Room,Magnetic Cavern,MSGARA_NAME_09,0,35,None,4
+202,Map_30141_1,Tower of Zot - 1F,1F,Tower of Zot,MSGARA_NAME_20,36,36,Dancing Calbrena,5
+203,Map_30141_2,Tower of Zot - 2F,2F,Tower of Zot,MSGARA_NAME_21,36,36,Dancing Calbrena,5
+204,Map_30141_3,Tower of Zot - 3F,3F,Tower of Zot,MSGARA_NAME_22,36,36,Dancing Calbrena,5
+205,Map_30141_4,Tower of Zot - 4F,4F,Tower of Zot,MSGARA_NAME_23,36,36,Dancing Calbrena,5
+206,Map_30141_5,Tower of Zot - 5F,5F,Tower of Zot,MSGARA_NAME_24,36,36,Dancing Calbrena,5
+207,Map_30141_6,Tower of Zot - 5F,5F,Tower of Zot,MSGARA_NAME_24,36,36,Dancing Calbrena,5
+208,Map_30141_7,Tower of Zot - 6F,6F,Tower of Zot,MSGARA_NAME_25,36,36,Dancing Calbrena,5
+209,Map_30141_8,Tower of Zot - 7F,7F,Tower of Zot,MSGARA_NAME_26,54,36,The Red Wings Remix,5
+210,Map_30151_1,Tower of Babel - Underworld 1F,Underworld 1F,Tower of Babel,MSGARA_NAME_43,31,45,Samba de Chocobo!,5
+211,Map_30151_2,Tower of Babel - Underworld 2F,Underworld 2F,Tower of Babel,MSGARA_NAME_44,31,45,Samba de Chocobo!,5
+212,Map_30151_3,Tower of Babel - Underworld 2F,Underworld 2F,Tower of Babel,MSGARA_NAME_44,31,45,Samba de Chocobo!,5
+213,Map_30151_4,Tower of Babel - Underworld 2F,Underworld 2F,Tower of Babel,MSGARA_NAME_44,31,45,Samba de Chocobo!,5
+214,Map_30151_5,Tower of Babel - Underworld 3F,Underworld 3F,Tower of Babel,MSGARA_NAME_45,31,45,Samba de Chocobo!,5
+215,Map_30151_6,Tower of Babel - Underworld 4F,Underworld 4F,Tower of Babel,MSGARA_NAME_46,31,45,Samba de Chocobo!,5
+216,Map_30151_7,Tower of Babel - Underworld 4F,Underworld 4F,Tower of Babel,MSGARA_NAME_46,31,45,Samba de Chocobo!,5
+217,Map_30151_8,Tower of Babel - Underworld 4F,Underworld 4F,Tower of Babel,MSGARA_NAME_46,31,45,Samba de Chocobo!,5
+218,Map_30151_9,Tower of Babel - Underworld 4F,Underworld 4F,Tower of Babel,MSGARA_NAME_46,31,45,Samba de Chocobo!,5
+219,Map_30151_10,Tower of Babel - Underworld 4F,Underworld 4F,Tower of Babel,MSGARA_NAME_46,31,45,Samba de Chocobo!,5
+220,Map_30151_11,Tower of Babel - Underworld 5F,Underworld 5F,Tower of Babel,MSGARA_NAME_47,31,45,Samba de Chocobo!,5
+221,Map_30151_12,Tower of Babel,,Tower of Babel,None,31,45,Samba de Chocobo!,6
+222,Map_30151_13,Tower of Babel - Underworld 6F,Underworld 6F,Tower of Babel,MSGARA_NAME_48,31,45,Samba de Chocobo!,6
+223,Map_30151_14,Tower of Babel - Underworld 7F,Underworld 7F,Tower of Babel,MSGARA_NAME_49,31,45,Samba de Chocobo!,6
+224,Map_30151_15,Tower of Babel - Underworld 7F,Underworld 7F,Tower of Babel,MSGARA_NAME_49,31,45,Samba de Chocobo!,6
+225,Map_30151_16,Tower of Babel - Underworld 8F,Underworld 8F,Tower of Babel,MSGARA_NAME_50,31,45,Samba de Chocobo!,6
+226,Map_30161_1,Cave of Eblan - B1,B1,Cave of Eblan,MSGARA_NAME_27,11,37,Chocobo Chocobo,6
+227,Map_30161_2,Cave of Eblan - Path to the Tower of Babel,Path to the Tower of Babel,Cave of Eblan,MSG_MAP_NAME_60,11,37,Chocobo Chocobo,6
+228,Map_30161_3,Cave of Eblan - Path to the Tower of Babel,Path to the Tower of Babel,Cave of Eblan,MSG_MAP_NAME_60,11,37,Chocobo Chocobo,6
+229,Map_30161_4,Cave of Eblan - Path to the Tower of Babel,Path to the Tower of Babel,Cave of Eblan,MSG_MAP_NAME_60,11,37,Chocobo Chocobo,6
+234,Map_30171_1,Tower of Babel - B1,B1,Tower of Babel,MSGARA_NAME_27,31,38,Samba de Chocobo!,7
+235,Map_30171_2,Tower of Babel - B2,B2,Tower of Babel,MSGARA_NAME_28,31,38,Samba de Chocobo!,7
+236,Map_30171_3,Tower of Babel - B3,B3,Tower of Babel,MSGARA_NAME_29,31,38,Samba de Chocobo!,7
+237,Map_30171_4,Tower of Babel - B3,B3,Tower of Babel,MSGARA_NAME_29,31,38,Samba de Chocobo!,7
+238,Map_30171_5,Tower of Babel - B4,B4,Tower of Babel,MSGARA_NAME_30,31,38,Samba de Chocobo!,7
+239,Map_30171_6,Tower of Babel - B5,B5,Tower of Babel,MSGARA_NAME_31,31,38,Samba de Chocobo!,7
+240,Map_30171_7,Tower of Babel - Underworld 8F,Underworld 8F,Tower of Babel,MSGARA_NAME_50,31,38,Samba de Chocobo!,7
+241,Map_30171_8,Tower of Babel - Underworld 7F,Underworld 7F,Tower of Babel,MSGARA_NAME_49,31,38,Samba de Chocobo!,7
+242,Map_30171_9,Tower of Babel - Underworld 6F,Underworld 6F,Tower of Babel,MSGARA_NAME_48,31,38,Samba de Chocobo!,7
+243,Map_30231_1,Giant of Babel - Mouth of the Giant,Mouth of the Giant,Giant of Babel,MSG_MAP_NAME_63,41,60,The Lunarians,7
+244,Map_30231_2,Giant of Babel - Neck of the Giant,Neck of the Giant,Giant of Babel,MSG_MAP_NAME_64,41,60,The Lunarians,7
+245,Map_30231_3,Giant of Babel - Chest of the Giant,Chest of the Giant,Giant of Babel,MSG_MAP_NAME_65,41,60,The Lunarians,7
+246,Map_30231_4,Giant of Babel - Stomach of the Giant,Stomach of the Giant,Giant of Babel,MSG_MAP_NAME_66,41,60,The Lunarians,7
+247,Map_30231_5,Giant of Babel - Inner Path of the Giant,Inner Path of the Giant,Giant of Babel,MSG_MAP_NAME_67,41,60,The Lunarians,7
+248,Map_30231_6,Giant of Babel - Stairwell of the Giant,Stairwell of the Giant,Giant of Babel,MSGARA_NAME_36,41,60,The Lunarians,7
+249,Map_30231_7,Giant of Babel - CPU of the Giant,CPU of the Giant,Giant of Babel,MSGARA_NAME_39,41,60,The Lunarians,7
+259,Map_30181_1,Sylvan Cave - B1,B1,Sylvan Cave,MSGARA_NAME_27,37,48,Tower of Zot,6
+260,Map_30181_2,Sylvan Cave - B2,B2,Sylvan Cave,MSGARA_NAME_28,37,48,Tower of Zot,6
+261,Map_30181_3,Sylvan Cave - B3,B3,Sylvan Cave,MSGARA_NAME_29,37,48,Tower of Zot,6
+262,Map_30181_4,Sylvan Cave - Hidden Chamber,Hidden Chamber,Sylvan Cave,MSGARA_NAME_19,37,48,Tower of Zot,6
+263,Map_30181_5,Sylvan Cottage,,Sylvan Cottage,None,37,43,Tower of Zot,6
+264,Map_30181_6,Sylvan Cottage - 2F,2F,Sylvan Cottage,MSGARA_NAME_21,37,43,Tower of Zot,6
+265,Map_30191_1,Cave of Summons - B1,B1,Cave of Summons,MSGARA_NAME_27,37,47,Tower of Zot,6
+266,Map_30191_2,Cave of Summons - B2,B2,Cave of Summons,MSGARA_NAME_28,37,47,Tower of Zot,6
+267,Map_30191_3,Cave of Summons - B3,B3,Cave of Summons,MSGARA_NAME_29,37,47,Tower of Zot,6
+268,Map_30201_1,Sealed Cavern - Entrance,Entrance,Sealed Cavern,MSGARA_NAME_53,11,46,Chocobo Chocobo,5
+269,Map_30201_2,Sealed Cavern - B1,B1,Sealed Cavern,MSGARA_NAME_27,11,46,Chocobo Chocobo,5
+270,Map_30201_3,Sealed Cavern - B1,B1,Sealed Cavern,MSGARA_NAME_27,11,46,Chocobo Chocobo,5
+271,Map_30201_4,Sealed Cavern - B1,B1,Sealed Cavern,MSGARA_NAME_27,11,46,Chocobo Chocobo,5
+272,Map_30201_5,Sealed Cavern - B1,B1,Sealed Cavern,MSGARA_NAME_27,11,46,Chocobo Chocobo,5
+273,Map_30201_6,Sealed Cavern - B1,B1,Sealed Cavern,MSGARA_NAME_27,11,46,Chocobo Chocobo,5
+274,Map_30201_7,Sealed Cavern - B2,B2,Sealed Cavern,MSGARA_NAME_28,11,46,Chocobo Chocobo,5
+275,Map_30201_8,Sealed Cavern - B2,B2,Sealed Cavern,MSGARA_NAME_28,11,46,Chocobo Chocobo,5
+276,Map_30201_9,Sealed Cavern - B2,B2,Sealed Cavern,MSGARA_NAME_28,11,46,Chocobo Chocobo,5
+277,Map_30201_10,Sealed Cavern - B2,B2,Sealed Cavern,MSGARA_NAME_28,11,46,Chocobo Chocobo,5
+278,Map_30201_11,Sealed Cavern - B2,B2,Sealed Cavern,MSGARA_NAME_28,11,46,Chocobo Chocobo,5
+279,Map_30201_12,Sealed Cavern - B2,B2,Sealed Cavern,MSGARA_NAME_28,11,46,Chocobo Chocobo,5
+280,Map_30201_13,Sealed Cavern - B2,B2,Sealed Cavern,MSGARA_NAME_28,11,46,Chocobo Chocobo,5
+281,Map_30201_14,Sealed Cavern - B2,B2,Sealed Cavern,MSGARA_NAME_28,11,46,Chocobo Chocobo,5
+282,Map_30201_15,Sealed Cavern - B3,B3,Sealed Cavern,MSGARA_NAME_29,11,46,Chocobo Chocobo,5
+283,Map_30201_16,Sealed Cavern - B3,B3,Sealed Cavern,MSGARA_NAME_29,11,46,Chocobo Chocobo,5
+284,Map_30201_17,Sealed Cavern - B3,B3,Sealed Cavern,MSGARA_NAME_29,11,46,Chocobo Chocobo,5
+285,Map_30201_18,Sealed Cavern - B3,B3,Sealed Cavern,MSGARA_NAME_29,11,46,Chocobo Chocobo,5
+286,Map_30201_19,Sealed Cavern - B3,B3,Sealed Cavern,MSGARA_NAME_29,11,46,Chocobo Chocobo,5
+287,Map_30201_20,Sealed Cavern - B4,B4,Sealed Cavern,MSGARA_NAME_30,11,46,Chocobo Chocobo,5
+288,Map_30201_21,Sealed Cavern - B4,B4,Sealed Cavern,MSGARA_NAME_30,11,46,Chocobo Chocobo,5
+289,Map_30201_22,Sealed Cavern - B5,B5,Sealed Cavern,MSGARA_NAME_31,11,46,Chocobo Chocobo,5
+290,Map_30201_23,Sealed Cavern - Crystal Room,Crystal Room,Sealed Cavern,MSGARA_NAME_09,69,46,The Prelude,5
+291,Map_30211_1,Western Lunar Path,,Western Lunar Path,None,40,51,Another Moon,8
+292,Map_30211_2,Eastern Lunar Path,,Eastern Lunar Path,None,40,53,Another Moon,8
+293,Map_30221_1,Cave of Bahamut - B1,B1,Cave of Bahamut,MSGARA_NAME_27,37,55,Tower of Zot,8
+294,Map_30221_2,Cave of Bahamut - B2,B2,Cave of Bahamut,MSGARA_NAME_28,37,55,Tower of Zot,8
+295,Map_30221_3,Cave of Bahamut - B3,B3,Cave of Bahamut,MSGARA_NAME_29,37,55,Tower of Zot,9
+296,Map_30251_1,Lunar Subterrane - B1,B1,Lunar Subterrane,MSGARA_NAME_27,54,56,The Red Wings Remix,7
+297,Map_30251_2,Lunar Subterrane - B2,B2,Lunar Subterrane,MSGARA_NAME_28,54,56,The Red Wings Remix,7
+298,Map_30251_3,Lunar Subterrane - B3,B3,Lunar Subterrane,MSGARA_NAME_29,54,56,The Red Wings Remix,8
+299,Map_30251_4,Lunar Subterrane - B4,B4,Lunar Subterrane,MSGARA_NAME_30,54,56,The Red Wings Remix,8
+300,Map_30251_5,Lunar Subterrane - B4,B4,Lunar Subterrane,MSGARA_NAME_30,54,56,The Red Wings Remix,8
+301,Map_30251_6,Lunar Subterrane - B4,B4,Lunar Subterrane,MSGARA_NAME_30,54,56,The Red Wings Remix,8
+302,Map_30251_7,Lunar Subterrane - B5,B5,Lunar Subterrane,MSGARA_NAME_31,54,56,The Red Wings Remix,8
+303,Map_30251_8,Lunar Subterrane - B5,B5,Lunar Subterrane,MSGARA_NAME_31,54,56,The Red Wings Remix,8
+304,Map_30251_9,Lunar Subterrane - B5,B5,Lunar Subterrane,MSGARA_NAME_31,54,56,The Red Wings Remix,8
+305,Map_30251_10,Lunar Subterrane - B5,B5,Lunar Subterrane,MSGARA_NAME_31,54,56,The Red Wings Remix,8
+306,Map_30251_11,Lunar Subterrane - B5,B5,Lunar Subterrane,MSGARA_NAME_31,54,56,The Red Wings Remix,8
+307,Map_30251_12,Lunar Subterrane - B6,B6,Lunar Subterrane,MSGARA_NAME_32,54,56,The Red Wings Remix,8
+308,Map_30251_13,Lunar Subterrane - B6,B6,Lunar Subterrane,MSGARA_NAME_32,54,56,The Red Wings Remix,9
+309,Map_30251_14,Lunar Subterrane - B7,B7,Lunar Subterrane,MSGARA_NAME_33,54,56,The Red Wings Remix,9
+310,Map_30251_15,Lunar Subterrane - B7,B7,Lunar Subterrane,MSGARA_NAME_33,54,56,The Red Wings Remix,9
+311,Map_30251_16,Lunar Subterrane - B7,B7,Lunar Subterrane,MSGARA_NAME_33,54,56,The Red Wings Remix,9
+312,Map_30251_17,Lunar Subterrane - B7,B7,Lunar Subterrane,MSGARA_NAME_33,54,56,The Red Wings Remix,9
+313,Map_30251_18,Lunar Subterrane - B8,B8,Lunar Subterrane,MSGARA_NAME_58,41,56,The Lunarians,9
+314,Map_30251_19,Lunar Subterrane - B9,B9,Lunar Subterrane,MSGARA_NAME_59,41,56,The Lunarians,9
+315,Map_30251_20,Lunar Subterrane - B10,B10,Lunar Subterrane,MSGARA_NAME_60,41,56,The Lunarians,9
+316,Map_30251_21,Lunar Subterrane - B11,B11,Lunar Subterrane,MSGARA_NAME_61,41,56,The Lunarians,9
+317,Map_30251_22,Lunar Subterrane - B12,B12,Lunar Subterrane,MSGARA_NAME_62,41,56,The Lunarians,9
+318,Map_20021_8,Town of Baron,,Town of Baron,None,11,5,Chocobo Chocobo,1
+319,Map_20070_2,Mist,,Mist,None,13,6,Battle 2,2
+320,Map_20110_2,Troia Castle,,Troia Castle,None,32,11,Tower of Bab-il,6
+321,Map_30171_10,Tower of Babel,,Tower of Babel,None,69,38,The Prelude,6
+322,Map_30171_11,Tower of Babel,,Tower of Babel,None,31,45,Samba de Chocobo!,6
+323,Map_20010_2,Castle Baron,,Castle Baron,None,69,4,The Prelude,1
+324,Map_20010_3,Castle Baron,,Castle Baron,None,69,4,The Prelude,1
+325,Map_20011_20,Castle Baron,,Castle Baron,None,69,4,The Prelude,1
+326,Map_20011_21,Castle Baron,,Castle Baron,None,69,4,The Prelude,1
+327,Map_20011_22,Castle Baron,,Castle Baron,None,69,4,The Prelude,1
+328,Map_20011_23,Castle Baron,,Castle Baron,None,69,4,The Prelude,1
+329,Map_20011_24,Castle Baron,,Castle Baron,None,69,4,The Prelude,1
+330,Map_20041_6,Damcyan Castle,,Damcyan Castle,None,69,8,The Prelude,1
+331,Map_20050_2,Fabul Castle,,Fabul Castle,None,6,9,Welcome to Our Town!,3
+332,Map_20050_3,Fabul Castle,,Fabul Castle,None,6,9,Welcome to Our Town!,3
+333,Map_20051_13,Fabul Castle,,Fabul Castle,None,69,9,The Prelude,3
+334,Map_20061_10,Mysidia,,Mysidia,None,69,10,The Prelude,4
+335,Map_20061_11,Mysidia,,Mysidia,None,69,10,The Prelude,4
+336,Map_20320,Mysidia,,Mysidia,None,69,10,The Prelude,4
+337,Map_20091_9,Eblan Castle,,Eblan Castle,None,69,14,The Prelude,5
+338,Map_20121_7,Agart,,Agart,None,69,13,The Prelude,4
+339,Map_20151_16,Dwarven Castle,,Dwarven Castle,None,5,39,Prologue,6
+340,Map_20150_2,Dwarven Castle,,Dwarven Castle,None,5,39,Prologue,6
+341,Map_20161_10,Cave of Summons,,Cave of Summons,None,5,47,Prologue,7
+342,Map_20230,Castle Baron,,Castle Baron,None,6,4,Welcome to Our Town!,5
+343,Map_20241_1,Mysidia,,Mysidia,None,6,10,Welcome to Our Town!,4
+344,Map_20250,Castle Baron,,Castle Baron,None,5,4,Prologue,2
+345,Map_20281_1,Castle Baron,,Castle Baron,None,5,4,Prologue,2
+346,Map_20290,Castle Baron,,Castle Baron,None,5,4,Prologue,2
+347,Map_20300,Castle Baron,,Castle Baron,None,5,4,Prologue,2
+348,Map_20310,Castle Baron,,Castle Baron,None,5,4,Prologue,2
+349,Map_30021_11,Mist Cave,,Mist Cave,None,5,24,Prologue,2
+350,Map_30111_1,Mt. Ordeals,,Mt. Ordeals,None,5,33,Prologue,4
+351,Map_30100_2,Mt. Ordeals,,Mt. Ordeals,None,5,33,Prologue,4
+352,Map_40001,Castle Baron,,Castle Baron,None,5,4,Prologue,2
+353,Map_40002,Castle Baron,,Castle Baron,None,5,4,Prologue,2
+354,Map_40003,Castle Baron,,Castle Baron,None,5,4,Prologue,2
+355,Map_40004,Castle Baron,,Castle Baron,None,5,4,Prologue,2
+356,Map_40005,Castle Baron,,Castle Baron,None,5,4,Prologue,2
+357,Map_20271_2,Lunar Whale,,Lunar Whale,None,38,57,The Land of Summons,0
+358,Map_40006,Castle Baron,,Castle Baron,None,5,4,Prologue,2
+359,Map_40007,Castle Baron,,Castle Baron,None,5,4,Prologue,2
+360,Map_40008,Castle Baron,,Castle Baron,None,5,4,Prologue,2
+361,Map_20310_1,Castle Baron,,Castle Baron,None,5,4,Prologue,2
+362,Map_40009,Castle Baron,,Castle Baron,None,5,4,Prologue,2
+800,Map_00000_1,Overworld,,Overworld,None,6,1,Welcome to Our Town!,0
+801,Map_00000_2,Overworld,,Overworld,None,6,1,Welcome to Our Town!,0
+802,Map_00000_3,Overworld,,Overworld,None,6,1,Welcome to Our Town!,0
+803,Map_00000_4,Overworld,,Overworld,None,6,1,Welcome to Our Town!,0
+804,Map_00000_5,Overworld,,Overworld,None,6,1,Welcome to Our Town!,0

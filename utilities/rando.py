@@ -39,7 +39,7 @@ class rando:
     def expfix(self):
         data = pd.read_csv("Data/GameAssets/Serial/Data/Master/exp_table.csv")
         for index, row in data.iterrows():
-            data._set_value(index, 'total_exp', trunc(row['total_exp']/3))
+            data._set_value(index, 'total_exp', trunc(row['total_exp']/2))
     #     guids = ["1","2","3","5","6","7","8","9","10","11","12"]
     #     lvls = ["10","10","10","20","20","5","10","10","10","25","50"]
     #     exps = ["0","4","11","22","40","68","106","160","233","330","454","612","808","1050","1344","1697","2116","2611","3189","3860","4632","5517","6525","7666","8952","10396","12009","13804","15795","17996","20421","23085","26003","29191","32665","36442","40539","44973","49764","54929","60488","66461","72866","79726","87060","94891","103241","112131","121585"]
@@ -136,16 +136,31 @@ class rando:
             data._set_value(index, 'intelligence', randrange(abs(int(row["intelligence"]/2))-5, int(abs(row["intelligence"]*2+5))))
             data._set_value(index, 'spirit', randrange(abs(int(row["spirit"]/2))-5, int(abs(row["spirit"]*2+5))))
             data._set_value(index, 'magic', randrange(abs(int(row["magic"]/2))-5, int(abs(row["magic"]*2+5))))
-            data._set_value(index, 'buy', randrange(abs(int(row["buy"]/5)), int(abs(row["buy"]*2+1))))
-            data._set_value(index, 'sell', randrange(abs(int(row["sell"])), int(abs(row["sell"]*5+1))))
+            if row["buy"] == 0:
+                if row["defense"] == 0:
+                    data._set_value(index, 'buy', randrange(1000, 50000))
+                    data._set_value(index, 'sell', int(row["buy"])/2)   
+                else:
+                    data._set_value(index, 'buy', randrange(abs(int(row["defense"]*1000)), int(abs(row["defense"]*2000))))
+                    data._set_value(index, 'sell', int(row["buy"])/2)
+            else:
+                data._set_value(index, 'buy', randrange(abs(int(row["buy"]/2+1)), int(abs(row["buy"]*2+2))))
+                data._set_value(index, 'sell', int(row["buy"])/2)
         data.to_csv('output/data/GameAssets/Serial/Data/Master/armor.csv', index=False, encoding='utf-8') 
     
     def armorextras(self):
         data = pd.read_csv("output/data/GameAssets/Serial/Data/Master/armor.csv")
+        contentdata = pd.read_csv("output/data/GameAssets/Serial/Data/Master/content.csv")
+        systemdata = pd.read_csv("Data/GameAssets/Serial/Data/Message/system_en.txt", delimiter='\t', names=['id', 'value'])
+
         res_att = data.resistance_attribute.unique().tolist()
         res_con = data.resistance_condition.unique().tolist()
         res_spe = data.resistance_species.unique().tolist()
         for index, row in data.iterrows():
+            dq = dataquery(row["id"])
+            print(row["id"])
+            sysval = dq.armordataquery()
+            print(sysval)            
             b = randrange(0, 8)
             if b == 1:
                 guid = random.sample(res_att, 1)
@@ -155,17 +170,28 @@ class rando:
             b = randrange(0, 8)
             if b == 1:
                 guid = random.sample(res_con, 1)
-                data._set_value(index, 'resistance_attribute', guid[0])
+                data._set_value(index, 'resistance_condition', guid[0])
             else:
-                data._set_value(index, 'resistance_attribute', '0')
+                data._set_value(index, 'resistance_condition', '0')
             b = randrange(0, 8)
             if b == 1:
                 guid = random.sample(res_spe, 1)
-                data._set_value(index, 'resistance_attribute', guid[0])
+                data._set_value(index, 'resistance_species', guid[0])
             else:
-                data._set_value(index, 'resistance_attribute', '0')
+                data._set_value(index, 'resistance_species', '0')
         data.to_csv('output/data/GameAssets/Serial/Data/Master/armor.csv', index=False, encoding='utf-8')
-                
+
+    def itempercen(self):
+        data = pd.read_csv("Data/GameAssets/Serial/Data/Master/item.csv")
+        for index, row in data.iterrows():
+            data._set_value(index, 'standard_value', randrange(int(row["standard_value"]/2), int(row["standard_value"]*2+1)))
+            if row["buy"] == 0:
+                data._set_value(index, 'buy', randrange(1000, 50000))
+                data._set_value(index, 'sell', int(row["buy"])/2)
+            else:
+                data._set_value(index, 'buy', randrange(abs(int(row["buy"]/2+1)), int(abs(row["buy"]*2+2))))
+                data._set_value(index, 'sell', int(row["buy"])/2)
+        data.to_csv('output/data/GameAssets/Serial/Data/Master/weapon.csv', index=False, encoding='utf-8')                 
     
     def weaponpercen(self):
         data = pd.read_csv("Data/GameAssets/Serial/Data/Master/weapon.csv")
@@ -181,12 +207,22 @@ class rando:
             data._set_value(index, 'intelligence', randrange(abs(int(row["intelligence"]/2))-5, int(abs(row["intelligence"]*2+6))))
             data._set_value(index, 'spirit', randrange(abs(int(row["spirit"]/2))-5, int(abs(row["spirit"]*2+6))))
             data._set_value(index, 'magic', randrange(abs(int(row["magic"]/2))-5, int(abs(row["magic"]*2+6))))
-            data._set_value(index, 'buy', randrange(abs(int(row["buy"]/5)), int(abs(row["buy"]*2+1))))
-            data._set_value(index, 'sell', randrange(abs(int(row["sell"])), int(abs(row["sell"]*5+1))))
+            if row["buy"] == 0:
+                if row["attack"] == 0:
+                    data._set_value(index, 'buy', randrange(1000, 50000))
+                    data._set_value(index, 'sell', int(row["buy"])/2)                    
+                else:
+                    data._set_value(index, 'buy', randrange(abs(int(row["attack"]*1000)), int(abs(row["attack"]*2000))))
+                    data._set_value(index, 'sell', int(row["buy"])/2)
+            else:
+                data._set_value(index, 'buy', randrange(abs(int(row["buy"]/2+1)), int(abs(row["buy"]*2+2))))
+                data._set_value(index, 'sell', int(row["buy"])/2)
         data.to_csv('output/data/GameAssets/Serial/Data/Master/weapon.csv', index=False, encoding='utf-8') 
 
     def weaponextras(self):
         data = pd.read_csv("output/data/GameAssets/Serial/Data/Master/weapon.csv")
+        contentdata = pd.read_csv("output/data/GameAssets/Serial/Data/Master/content.csv")
+        systemdata = pd.read_csv("output/data/GameAssets/Serial/Data/Message/system_en.txt", delimiter='\t', names=['id', 'value'])
         res_tri = data.trigger_ability_id.unique().tolist()
         res_wat = data.weak_attribute.unique().tolist()
         res_esp = data.effective_species.unique().tolist()
@@ -194,6 +230,7 @@ class rando:
         res_att = data.attribute_id.unique().tolist()
         res_atg = data.attribute_group_id.unique().tolist()
         for index, row in data.iterrows():
+            
             b = randrange(0, 8)
             if b == 1:
                 guid = random.sample(res_tri, 1)
@@ -222,20 +259,16 @@ class rando:
             if b == 1:
                 guid = random.sample(res_att, 1)
                 data._set_value(index, 'attribute_id', guid[0])
+                data._set_value(index, 'attribute_group_id', guid[0]+100)
             else:
                 data._set_value(index, 'attribute_id', '0')
-            b = randrange(0, 8)
-            if b == 1:
-                guid = random.sample(res_atg, 1)
-                data._set_value(index, 'attribute_group_id', guid[0])
-            else:
                 data._set_value(index, 'attribute_group_id', '0')
         data.to_csv('output/data/GameAssets/Serial/Data/Master/weapon.csv', index=False, encoding='utf-8')
         
     def monskillfix(self):
-        systemdata = pd.read_csv("output/data/GameAssets/Serial/Data/Master/system_en.txt", delimiter='\t', names=['id', 'value'])
-        monskilldata = pd.read_csv("Data/mon_skills.csv")
-        contentdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/content.csv")
+        systemdata = pd.read_csv("output/data/GameAssets/Serial/Data/Message/system_en.txt", delimiter='\t', names=['id', 'value'])
+        monskilldata = pd.read_csv("Data/Extra/mon_skills.csv")
+        contentdata = pd.read_csv("output/data/GameAssets/Serial/Data/Master/content.csv")
         cq=contentdata.query('mes_id_name.str.contains("MON")')
         for id, row in cq.iterrows():
             desnameinit =  row["mes_id_name"]
@@ -261,7 +294,7 @@ class rando:
         abilitydata = pd.read_csv("output/data/GameAssets/Serial/Data/Master/ability.csv")
         learningdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/learning.csv", nrows=0)
         charstatdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/character_status.csv")
-        cq = contentdata.query('mes_id_name.str.contains("MAGIC") or mes_id_name.str.contains("MON")', engine='python')
+        cq = contentdata.query('mes_id_name.str.contains("MAGIC")', engine='python')
         masterid = 1
         #print(cq)
         #print(abilitydata)
@@ -365,7 +398,7 @@ class rando:
         systemdata.at[val, 'value'] = 'All Magic'
 
         
-        systemdata.to_csv('output/data/GameAssets/Serial/Data/Master/system_en.txt', index=False, header=False, sep='\t', encoding='utf-8')
+        systemdata.to_csv('output/data/GameAssets/Serial/Data/Message/system_en.txt', index=False, header=False, sep='\t', encoding='utf-8')
         learningdata.to_csv('output/data/GameAssets/Serial/Data/Master/learning.csv', index=False, encoding='utf-8')   
         charstatdata.to_csv('output/data/GameAssets/Serial/Data/Master/character_status.csv', index=False, encoding='utf-8')
         #pp = printer.magiclist("bah")
@@ -399,6 +432,45 @@ class rando:
                     json.dump(map, out_file)
                     out_file.close()
 
+    def cheststiers(self):
+        itemtierdata = pd.read_csv("Data/Extras/item_tier.csv")
+        maptierdata = pd.read_csv("Data/Extras/map_tier.csv")
+        #sp = cq["id"].sample(replace=True).item()
+    
+        for root, dirs, files in os.walk("data"):
+            for file in files:
+                #print(root, dirs, file)
+                if file.startswith("entity_default.json"):
+                    m = open(root + "/" + file)
+                    map = json.load(m)
+                    for i in map['layers']:
+                        for j in i['objects']:
+                            for k in j['properties']:
+                                if k['name'] == 'content_id':
+                                    #print(mapdata)
+                                    m=os.path.basename(os.path.normpath(root))
+                                    mtier=maptierdata.query('map_name == @m')
+                                    mtier=mtier["tier"].item()
+                                    #print(mtier)
+                                    itier=itemtierdata.query('tier == @mtier')
+                                    #print(itier)
+                                    #print(m)
+                                    sp = itier["id"].sample(replace=True).item()
+                                    #print(sp)
+                                    k['value'] = sp
+                                    k['content_num'] = 1
+                                    k['message_key'] = 'S0005_999_a_02'
+                                    #print(k['name'], k['value'])
+                    isExist = os.path.exists("output\\" + root)    
+                    #print("output\\" + root)
+                    if not isExist:
+                        os.makedirs("output\\" + root)
+                    
+                    out_file = open("output\\" + root + "\\" + file, "w")
+                    
+                    json.dump(map, out_file)
+                    out_file.close()
+
     def monsterdrops(self):
         monsterdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/monster.csv")
         contentdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/content.csv")
@@ -416,7 +488,131 @@ class rando:
                 sp = cq["id"].sample(replace=True).item()
                 monsterdata._set_value(id, 'drop_content_id5', sp)
         monsterdata.to_csv('output/data/GameAssets/Serial/Data/Master/monster.csv', index=False, encoding='utf-8')
-            
-            
-            
+        
+
+    def monsterdropstiers(self):
+        monsterdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/monster.csv")
+        itemtierdata = pd.read_csv("Data/Extras/item_tier.csv")
+        for id, row in monsterdata.iterrows():
+            if row['drop_content_id1'] != 0:
+                if trunc(row['lv']/10)==0:
+                    mtier=1
+                else:
+                    mtier=trunc(row['lv']/10)
+                itier=itemtierdata.query('tier == @mtier')
+                sp = itier["id"].sample(replace=True).item()                
+                monsterdata._set_value(id, 'drop_content_id1', sp)
+                sp = itier["id"].sample(replace=True).item()
+                monsterdata._set_value(id, 'drop_content_id2', sp)
+                sp = itier["id"].sample(replace=True).item()
+                monsterdata._set_value(id, 'drop_content_id3', sp)
+                sp = itier["id"].sample(replace=True).item()
+                monsterdata._set_value(id, 'drop_content_id4', sp)
+                sp = itier["id"].sample(replace=True).item()
+                monsterdata._set_value(id, 'drop_content_id5', sp)
+        monsterdata.to_csv('output/data/GameAssets/Serial/Data/Master/monster.csv', index=False, encoding='utf-8')
+
+
+
+    def shops(self):
+        productdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/product.csv")
+        contentdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/content.csv")
+        weapondata = pd.read_csv("output/data/GameAssets/Serial/Data/Master/weapon.csv")
+        armordata = pd.read_csv("output/data/GameAssets/Serial/Data/Master/armor.csv")
+        itemdata = pd.read_csv("output/data/GameAssets/Serial/Data/Master/item.csv")
+        cq = contentdata.query('mes_id_name.str.contains("ARMOR") or mes_id_name.str.contains("WEAPON") or mes_id_name.str.contains("ITEM")', engine='python')
+        pq = productdata.query('content_id != 0')
+        pq2 = productdata.query('content_id == 0')
+        producttemp = pd.read_csv("Data/GameAssets/Serial/Data/Master/product.csv", nrows=0)
+        shops = pq.group_id.unique().tolist()
+        masterid = 1
+        
+        for shop in shops:
+            num=randrange(1, 21)
+            i=1
+            while i < num:
+                sp = cq["id"].sample(replace=True).item()
+                new_row = {'id':masterid, 'content_id':sp, 'group_id':shop, 'coefficient':0, 'purchase_limit':0}
+                producttemp = producttemp.append([new_row], ignore_index = True)
+                i += 1
+                masterid +=1
+        
+        for id, row in pq2.iterrows():
+            #print(row)
+            row._set_value("id", masterid)
+            #print(row)
+            producttemp = producttemp.append([row], ignore_index = True)
+            masterid +=1
+        
+        producttemp.to_csv('output/data/GameAssets/Serial/Data/Master/product.csv', index=False, encoding='utf-8')
+        for id, row in weapondata.iterrows():
+            if row.empty == False:
+                if row['buy'] == 0:
+                    weapondata._set_value(id, 'buy', 1)
+        for id, row in armordata.iterrows():
+            if row.empty == False:
+                if row['buy'] == 0:
+                    armordata._set_value(id, 'buy', 1)
+        for id, row in itemdata.iterrows():    
+            #print(row)
+            if row.empty == False:
+                if row['buy'] == 0:
+                    itemdata._set_value(id, 'buy', 1)
+        armordata.to_csv('output/data/GameAssets/Serial/Data/Master/armor.csv', index=False, encoding='utf-8')
+        weapondata.to_csv('output/data/GameAssets/Serial/Data/Master/weapon.csv', index=False, encoding='utf-8')
+        itemdata.to_csv('output/data/GameAssets/Serial/Data/Master/item.csv', index=False, encoding='utf-8')
+        
+    def shopstiers(self):
+        productdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/product.csv")
+        #maptierdata = pd.read_csv("Data/map_tier.csv")
+        itemtierdata = pd.read_csv("Data/Extra/item_tier.csv")
+        pq = productdata.query('content_id != 0')
+        pq2 = productdata.query('content_id == 0')
+        producttemp = pd.read_csv("Data/GameAssets/Serial/Data/Master/product.csv", nrows=0)
+        shops = pq.group_id.unique().tolist()
+        masterid = 1
+        
+        for shop in shops:
+            if shop == 0:
+                tier=1
+            elif shop <5: 
+                tier=1
+            elif shop <10:
+                tier=2
+            elif shop <15:
+                tier=3
+            elif shop <20:
+                tier=4
+            elif shop <25:
+                tier=5
+            elif shop <30:
+                tier=6
+            elif shop <35:
+                tier=7
+            elif shop <38:
+                tier=8
+            elif shop <100:
+                tier=9
+
+            #print(tier)
+            itier=itemtierdata.query('tier == @tier')
+            num=randrange(5, 16)
+            i=1
+            while i < num:
+                sp = itier["id"].sample(replace=True).item()
+                new_row = {'id':masterid, 'content_id':sp, 'group_id':shop, 'coefficient':0, 'purchase_limit':0}
+                producttemp = producttemp.append([new_row], ignore_index = True)
+                i += 1
+                masterid +=1
+        
+        for id, row in pq2.iterrows():
+            #print(row)
+            row._set_value("id", masterid)
+            #print(row)
+            producttemp = producttemp.append([row], ignore_index = True)
+            masterid +=1
+        
+        producttemp.to_csv('output/data/GameAssets/Serial/Data/Master/product.csv', index=False, encoding='utf-8')
+
+        
             

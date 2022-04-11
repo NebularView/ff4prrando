@@ -28,6 +28,34 @@ class printer(object):
                 
             else:
                 return
+            
+    def itemlist(self):
+        itemdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/item.csv")
+        weapondata = pd.read_csv("Data/GameAssets/Serial/Data/Master/weapon.csv")
+        armordata = pd.read_csv("Data/GameAssets/Serial/Data/Master/armor.csv")
+        for index, row in itemdata.iterrows():
+
+            query1 = dataquery(row["id"])
+            output1 = query1.itemdataquery()
+            if output1 != "None":
+                print(str(output1))
+                
+            
+        for index, row in armordata.iterrows():
+
+            query2 = dataquery(row["id"])
+            output2 = query2.armordataquery()
+            if output2 != "None":
+                print(str(output2))
+                
+            
+        for index, row in weapondata.iterrows():
+
+            query3 = dataquery(row["id"])
+            output3 = query3.weapondataquery()
+            if output3 != "None":
+                print(str(output3))
+                
                 
 
     def magiclist(self):
@@ -113,3 +141,56 @@ class printer(object):
                 output6 += " - " + str(mes5add)
     
             print(str(output1) + "\n" + "----------\n" + str(output2) + "\n" + str(output3) + "\n" + str(output4) + "\n" + str(output5) + "\n" + str(output6) + "\n")
+            
+            
+    def condlist(self):
+        armordata = pd.read_csv("Data/GameAssets/Serial/Data/Master/armor.csv")
+        condgdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/condition_group.csv")
+        conddata = pd.read_csv("Data/GameAssets/Serial/Data/Master/condition.csv")
+        
+        for index, row in condgdata.iterrows():
+            #print(row)
+            output1 = "None"
+            query1 = conddata.query('id == @row["condition_id"]')
+            #print(query1["mes_id_name"].item())
+            if query1["mes_id_name"].item() != 'None':
+                #print(query1["mes_id_name"])
+                query1 = dataquery(query1["mes_id_name"].item())
+                output1 = str(row["condition_id"].item()) + " - " + query1.sysdataquery()
+            if output1 != "None":
+                print(str(output1))
+                
+    def armorcondlist(self):
+        armordata = pd.read_csv("Data/GameAssets/Serial/Data/Master/armor.csv")
+        condgdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/condition_group.csv")
+        conddata = pd.read_csv("Data/GameAssets/Serial/Data/Master/condition.csv")
+        
+        #print(armordata.info())
+
+        for index, row in armordata.iterrows():
+            output3 = "Resistances: \n"
+            if row["resistance_condition"] != 0:
+                tester = str(row.resistance_condition)
+                #print(row["resistance_condition"])
+                #print(condgdata["id"])
+                #query1 = condgdata.query('id == 82')
+                output2 = str(row["resistance_condition"])
+                query1 = condgdata.loc[condgdata['group_id'] == row["resistance_condition"]]
+                #print(query1)
+                i=0
+                for index, row in query1.iterrows():
+                    #print(row)
+                    
+                    output1 = row['condition_id']
+                    #print(index)
+                    query2 = conddata.loc[conddata['id'] == output1]
+                    #print(query1["mes_id_name"].item())
+                    if query2["mes_id_name"].item() != 'None':
+                        #print(query1["mes_id_name"])
+                        if i == 0:
+                            output3 += output2 + " :"
+                        query3 = dataquery(query2["mes_id_name"].item())
+                        output3 = output3 + " " + query3.sysdataquery()
+                    i += 1
+                if output3 != "None":
+                    print(str(output3))
