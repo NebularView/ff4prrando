@@ -372,7 +372,7 @@ class rando:
     def monskillfix(self):
         systemdata = pd.read_csv("output/data/GameAssets/Serial/Data/Message/system_en.txt", delimiter='\t', names=['id', 'value'])
         monskilldata = pd.read_csv("Data/Extra/mon_skills.csv")
-        contentdata = pd.read_csv("output/data/GameAssets/Serial/Data/Master/content.csv")
+        contentdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/content.csv")
         cq=contentdata.query('mes_id_name.str.contains("MON")')
         for id, row in cq.iterrows():
             desnameinit =  row["mes_id_name"]
