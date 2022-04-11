@@ -87,13 +87,13 @@ class dataquery:
     
         q2 = cq['mes_id_name'].item()
         
-        print(q2)
+        #print(q2)
     
         #print (q2)
     
         sq = systemdata.query('id == @q2')
     
-        print (sq)
+        #print (sq)
     
         sdout = str(sq['value'].item())
         
