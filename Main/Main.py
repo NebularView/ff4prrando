@@ -17,15 +17,34 @@ import time
 
 if __name__ == '__main__':
    
-
-    #prinny = printer()
-    #prinny.commandlist()
+    # print("Validating output directories")
+    # path = 'output/data/GameAssets/Serial/Data/Master'
+    # isExist = os.path.exists(path)    
+    # if not isExist:
+    #     os.makedirs(path)
+    #
+    # path = 'output/data/GameAssets/Serial/Data/Message'
+    # isExist = os.path.exists(path)    
+    # if not isExist:
+    #     os.makedirs(path)
+    # print("Complete")
     
+
+    # dataquery = dataquery(25)
+    # dq = dataquery.weapontrigquery()
+    # print(dq)
+
+    # prinny = printer()
+    # prinny.armorcondlist()
+    # exit()
     # r1=rando()
+    # r1.monsterdropstiers()
+    
     # r1.weaponpercen()
     # r1.weaponextras()
     # r1.armorpercen()
     # r1.armorextras()
+    
     ranbool=input("Randomize with default settings? (All) Y/N : ").upper()
     if ranbool == "Y":
         conbool="Y"
@@ -40,6 +59,7 @@ if __name__ == '__main__':
         monbool="Y"
         mncbool="Y"
         chebool="Y"
+        shobool="Y"
     else:    
         conbool=input("Adjust constants for higher maximum statistic caps and item stacks? Y/N : ").upper()
         expbool=input("Adjust needed exp for leveling? Y/N : ").upper()
@@ -58,11 +78,12 @@ if __name__ == '__main__':
         leabool=input("Adjust commands and spell capabilities? Y/N : ").upper()
         monbool=input("Adjust monster drops and steals? Y/N : ").upper()
         mncbool=input("Adjust monster command descriptions? Y/N : ").upper()
-        chebool=input("Adjust chest contents? (Currently completely random and new) Y/N : ").upper()
+        chebool=input("Adjust chest contents? (Very Basic Tiered) Y/N : ").upper()
+        shobool=input("Adjust shop contents? (Very Basic Tiered) Y/N : ").upper()
     
     
     
- 
+    
     print("Validating output directories")
     path = 'output/data/GameAssets/Serial/Data/Master'
     isExist = os.path.exists(path)    
@@ -102,17 +123,17 @@ if __name__ == '__main__':
         print("Adjusting armor strengths, stats, and costs")
         r1.armorpercen()
         print("Complete")
-
+    
     if argbool == "Y":
         print("Adjusting armor elements, procs, and group effectiveness")
         r1.armorextras()
         print("Complete")
-
+    
     if weabool == "Y":    
         print("Adjusting weapon strengths, stats, and costs")
         r1.weaponpercen()
         print("Complete")
-
+    
     if wegbool == "Y":
         print("Adjusting weapon elements, attributes and group effectiveness")
         r1.weaponextras()
@@ -122,7 +143,7 @@ if __name__ == '__main__':
         print("Adjusting commands and spell capabilities")
         r1.learning()
         print("Complete")
-
+    
     if monbool == "Y":
         print("Adjusting monster command descriptions")
         r1.monskillfix()
@@ -130,14 +151,18 @@ if __name__ == '__main__':
     
     if mncbool == "Y":
         print("Adjusting monster drops and steals")
-        r1.monsterdrops()
+        r1.monsterdropstiers()
         print("Complete")
     
     if chebool == "Y":
         print("Adjusting chest contents")
-        r1.chests()
+        r1.cheststiers()
         print("Complete")
     
+    if shobool == "Y":
+        print("Adjusting shop contents")
+        r1.shopstiers()
+        print("Complete")
     print("Randomization complete, Please check output directory!")
 
     pass

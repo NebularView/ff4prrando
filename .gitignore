@@ -23,3 +23,4 @@ local.properties
 
 #Specific
 output/*
+*/__pychache_*
