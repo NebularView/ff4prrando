@@ -139,10 +139,10 @@ class rando:
             if row["buy"] == 0:
                 if row["defense"] == 0:
                     data._set_value(index, 'buy', randrange(1000, 50000))
-                    data._set_value(index, 'sell', int(row["buy"])/2)   
+                    data._set_value(index, 'sell', int(trunc(row["buy"])/2))   
                 else:
                     data._set_value(index, 'buy', randrange(abs(int(row["defense"]*1000)), int(abs(row["defense"]*2000))))
-                    data._set_value(index, 'sell', int(row["buy"])/2)
+                    data._set_value(index, 'sell', int(trunc(row["buy"])/2))
             else:
                 data._set_value(index, 'buy', randrange(abs(int(row["buy"]/2+1)), int(abs(row["buy"]*2+2))))
                 data._set_value(index, 'sell', int(row["buy"])/2)
@@ -229,10 +229,11 @@ class rando:
             data._set_value(index, 'standard_value', randrange(int(row["standard_value"]/2), int(row["standard_value"]*1.5+1)))
             if row["buy"] == 0:
                 data._set_value(index, 'buy', randrange(1000, 50000))
-                data._set_value(index, 'sell', int(row["buy"])/2)
+                data._set_value(index, 'sell', trunc(int(row["buy"])/2))
             else:
                 data._set_value(index, 'buy', randrange(abs(int(row["buy"]/2+1)), int(abs(row["buy"]*2+2))))
-                data._set_value(index, 'sell', int(row["buy"])/2)
+                data._set_value(index, 'sell', trunc(int(row["buy"])/2))
+            data._set_value(index, 'sales_not_possible', 0)
         data.to_csv('output/data/GameAssets/Serial/Data/Master/item.csv', index=False, encoding='utf-8')                 
     
     def weaponpercen(self):
@@ -252,10 +253,10 @@ class rando:
             if row["buy"] == 0:
                 if row["attack"] == 0:
                     data._set_value(index, 'buy', randrange(1000, 50000))
-                    data._set_value(index, 'sell', int(row["buy"])/2)                    
+                    data._set_value(index, 'sell', int(trunc(row["buy"])/2))                    
                 else:
                     data._set_value(index, 'buy', randrange(abs(int(row["attack"]*1000)), int(abs(row["attack"]*2000))))
-                    data._set_value(index, 'sell', int(row["buy"])/2)
+                    data._set_value(index, 'sell', int(trunc(row["buy"])/2))
             else:
                 data._set_value(index, 'buy', randrange(abs(int(row["buy"]/2+1)), int(abs(row["buy"]*2+2))))
                 data._set_value(index, 'sell', int(row["buy"])/2)

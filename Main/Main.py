@@ -60,6 +60,7 @@ if __name__ == '__main__':
         mncbool="Y"
         chebool="Y"
         shobool="Y"
+        itebool="Y"
     else:    
         conbool=input("Adjust constants for higher maximum statistic caps and item stacks? Y/N : ").upper()
         expbool=input("Adjust needed exp for leveling? Y/N : ").upper()
@@ -80,6 +81,7 @@ if __name__ == '__main__':
         mncbool=input("Adjust monster command descriptions? Y/N : ").upper()
         chebool=input("Adjust chest contents? (Very Basic Tiered) Y/N : ").upper()
         shobool=input("Adjust shop contents? (Very Basic Tiered) Y/N : ").upper()
+        itebool=input("Adjust item parameters? Y/N : ").upper()
     
     
     
@@ -163,6 +165,12 @@ if __name__ == '__main__':
         print("Adjusting shop contents")
         r1.shopstiers()
         print("Complete")
+        
+    if itebool == "Y":
+        print("Adjusting item parameters")
+        r1.itempercen()
+        print("Complete")
+        
     print("Randomization complete, Please check output directory!")
 
     pass
