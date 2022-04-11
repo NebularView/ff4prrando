@@ -95,7 +95,7 @@ class dataquery:
     
         #print (sq)
     
-        sdout = str(sq['value'].item())
+        sdout = str(sq['id'].item())
         
         return(sdout)
                  
@@ -110,6 +110,8 @@ class dataquery:
         cq = contentdata.query('type_value == @self.value and type_id == 4')
     
         #print (cq)
+        
+        #print(cq)
     
         q2 = cq['mes_id_name'].item()
         
@@ -121,12 +123,40 @@ class dataquery:
     
         #print (sq)
     
-        sdout = str(sq['value'].item())
+        sdout = str(sq['id'].item())
         
         return(sdout)
                  
         pass
+
+    def magicdataquery2(self):
+        
+        contentdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/content.csv")
+        systemdata = pd.read_csv("Data/GameAssets/Serial/Data/Message/system_en.txt", delimiter='\t', names=['id', 'value'])
+        
+        cq = contentdata.query('type_value == @self.value and type_id == 4')
     
+        #print (cq)
+        
+        #print(cq)
+    
+        q2 = cq['mes_id_name'].item()
+        
+        #print(q2)
+    
+        #print (q2)
+    
+        sq = systemdata.query('id == @q2')
+    
+        #print (sq)
+    
+        sdout = re.sub('<.*>', '', str(sq['value'].item()))
+        #print(sdout)
+        
+        return(sdout)
+                 
+        pass
+
     def armordataquery(self):
         
         contentdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/content.csv")
@@ -190,9 +220,8 @@ class dataquery:
                         output3 = output3 + " " + query3.sysdataquery()
                     i += 1
                 if output3 != "None":
-                    return(str(output3))
-                
-                
+                    return(str(output3))         
+                  
     def armorattrquery(self):
         armordata = pd.read_csv("Data/GameAssets/Serial/Data/Master/armor.csv")
         attrgdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/attribute_group.csv")
@@ -421,3 +450,103 @@ class dataquery:
             output1 = "On Use: " + re.sub('<.*>', '', wdq.magicdataquery()) 
             if output1 != "None":
                 return(str(output1))
+
+    def trigquery(self):
+        wdq = dataquery(self.value)
+        ability = pd.read_csv("Data/GameAssets/Serial/Data/Master/ability.csv")
+        output1 = "On Use: " + re.sub('<.*>', '', wdq.magicdataquery()) 
+        return(str(output1))
+            
+    def elemquery(self):
+        attrgdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/attribute_group.csv")
+        elemdata = pd.read_csv("Data/Extra/element.csv")
+        output3 = "Elements:"
+        if self.value != 0:
+            #tester = str(row.resistance_condition)
+            #print(row["resistance_condition"])
+            #print(condgdata["id"])
+            #query1 = condgdata.query('id == 82')
+            output2 = str(self.value)
+            #print(self.value)
+            query1 = attrgdata.loc[attrgdata['group_id'] == self.value]
+            #print(query1)
+            i=0
+            for index, row in query1.iterrows():
+                #print(row)
+                
+                output1 = row['attribute_id']
+                #print(index)
+                query2 = elemdata.loc[elemdata['id'] == output1]
+                #print(query1["mes_id_name"].item())
+                if query2["name"].item() != 'None':
+                    #print(query1["mes_id_name"])
+                    #if i == 0:
+                        #output3 += output2 + " :"
+                    output3 = output3 + " " + query2["name"].item()
+                i += 1
+            if output3 != "None":
+                return(str(output3))      
+            
+    def condquery(self):       
+        condgdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/condition_group.csv")
+        conddata = pd.read_csv("Data/GameAssets/Serial/Data/Master/condition.csv")
+        
+
+        output3 = "Status:"
+        if self.value != 0:
+            #tester = str(row.resistance_condition)
+            #print(row["resistance_condition"])
+            #print(condgdata["id"])
+            #query1 = condgdata.query('id == 82')
+            output2 = str(self.value)
+            query1 = condgdata.loc[condgdata['group_id'] == self.value]
+            #print(query1)
+            i=0
+            for index, row in query1.iterrows():
+                #print(row)
+                
+                output1 = row['condition_id']
+                #print(index)
+                query2 = conddata.loc[conddata['id'] == output1]
+                #print(query1["mes_id_name"].item())
+                if query2["mes_id_name"].item() != 'None':
+                    #print(query1["mes_id_name"])
+                    #if i == 0:
+                        #output3 += output2 + " :"
+                    query3 = dataquery(query2["mes_id_name"].item())
+                    output3 = output3 + " " + query3.sysdataquery()
+                i += 1
+            if output3 != "None":
+                return(str(output3))
+
+
+    def specquery(self):
+        specgdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/species_group.csv")
+        specdata = pd.read_csv("Data/Extra/species.csv")       
+        
+        output3 = "Species:"
+        if self.value != 0:
+            #tester = str(row.resistance_condition)
+            #print(row["resistance_condition"])
+            #print(condgdata["id"])
+            #query1 = condgdata.query('id == 82')
+            output2 = str(self.value)
+            query1 = specgdata.loc[specgdata['group_id'] == self.value]
+            #print(query1)
+            i=0
+            for index, row in query1.iterrows():
+                #print(row)
+                
+                output1 = row['species_id']
+                #print(output1)
+                query2 = specdata.loc[specdata['id'] == output1]
+                #print(query2)
+                #print(query1["mes_id_name"].item())
+                if query2["name"].item() != 'None':
+                    #print(query1["mes_id_name"])
+                    #if i == 0:
+                        #output3 += output2 + " :"
+                    output3 = output3 + " " + query2["name"].item()
+                i += 1
+            if output3 != "None":
+                return(str(output3))

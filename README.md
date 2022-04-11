@@ -14,3 +14,4 @@ I have really no idea what I am doing however, this should randomize the followi
 * monster drops and steals
 * monster command descriptions
 * chest contents
+* shop contents

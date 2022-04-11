@@ -30,13 +30,13 @@ if __name__ == '__main__':
     # print("Complete")
     
 
-    dataquery = dataquery(25)
-    dq = dataquery.weapontrigquery()
-    print(dq)
+    # dataquery = dataquery(25)
+    # dq = dataquery.weapontrigquery()
+    # print(dq)
 
     # prinny = printer()
     # prinny.armorcondlist()
-    exit()
+    # exit()
     # r1=rando()
     # r1.monsterdropstiers()
     
@@ -78,8 +78,8 @@ if __name__ == '__main__':
         leabool=input("Adjust commands and spell capabilities? Y/N : ").upper()
         monbool=input("Adjust monster drops and steals? Y/N : ").upper()
         mncbool=input("Adjust monster command descriptions? Y/N : ").upper()
-        chebool=input("Adjust chest contents? (Currently completely random and new) Y/N : ").upper()
-        shobool=input("Adjust shop contents? (Currently completely random and new) Y/N : ").upper()
+        chebool=input("Adjust chest contents? (Very Basic Tiered) Y/N : ").upper()
+        shobool=input("Adjust shop contents? (Very Basic Tiered) Y/N : ").upper()
     
     
     
