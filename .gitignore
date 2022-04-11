@@ -23,6 +23,8 @@ local.properties
 
 #Specific
 output/*
-*/__pychache_*
+*/__pychache__*
 __pycache__/
+Main/__pycache__
+utilities/__pycache__
 *.py[cod]
