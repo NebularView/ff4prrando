@@ -79,7 +79,16 @@ class printer(object):
             print(output2, output3, output1)
     pass
     def abilitylist(self):
-        print("fuck")
+        contentdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/content.csv")
+        abilitydata = pd.read_csv("Data/GameAssets/Serial/Data/Master/ability.csv")
+        cdq = contentdata.query('(mes_id_name.str.contains("MAGIC") or mes_id_name.str.contains("MON")) and mes_id_battle.str.contains("None")', engine='python')
+        #print(cdq)
+        for id, row in cdq.iterrows():
+            abq = abilitydata.query('id == @row["type_value"]')
+            query = dataquery(row["mes_id_name"])
+            #print(abq)
+            if abq.iloc[0]["use_value"] != 0:
+                print (str(abq.iloc[0]["id"]) + ", " + str(abq.iloc[0]["use_value"]) + ", " + str(abq.iloc[0]["standard_value"]) + ", " + str(row["id"]) + ", " + query.sysdataquery())
     pass
     def charcommandlist(self):
         charstatdata = pd.read_csv("output/character_status.csv")

@@ -11,6 +11,7 @@ from utilities.rando import rando
 import random
 from random import randrange
 import os
+import shutil
 import requests
 import re
 import time
@@ -34,11 +35,12 @@ if __name__ == '__main__':
     # dq = dataquery.weapontrigquery()
     # print(dq)
 
-    # prinny = printer()
-    # prinny.armorcondlist()
-    # exit()
+    #prinny = printer()
+    #prinny.commandlist()
     # r1=rando()
-    # r1.monsterdropstiers()
+    # r1.learningtiers()
+    # exit()
+
     
     # r1.weaponpercen()
     # r1.weaponextras()
@@ -97,9 +99,23 @@ if __name__ == '__main__':
     if not isExist:
         os.makedirs(path)
     print("Complete")
+
+    
+    print("Prepping output files")
+    fileNames=file_list=os.listdir(r"Data/GameAssets/Serial/Data/Master/")
+    for item in fileNames:
+        if item.endswith('.csv'):
+            shutil.copyfile("Data/GameAssets/Serial/Data/Master/" + item, "output/data/GameAssets/Serial/Data/Master/" + item)
+    fileNames=file_list=os.listdir(r"Data/GameAssets/Serial/Data/Message/")
+    for item in fileNames:
+        if item.endswith('.csv'):
+            shutil.copyfile("Data/GameAssets/Serial/Data/Message/" + item, "output/data/GameAssets/Serial/Data/Message/" + item)
+    print("Complete")
+    
+
+    
+    
     r1=rando()
-    
-    
     if conbool == "Y":
         print("Adjusting constants")
         r1.constadjust()
@@ -143,7 +159,7 @@ if __name__ == '__main__':
     
     if leabool == "Y":
         print("Adjusting commands and spell capabilities")
-        r1.learning()
+        r1.learningtiers()
         print("Complete")
     
     if monbool == "Y":

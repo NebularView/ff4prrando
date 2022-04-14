@@ -265,6 +265,8 @@ class rando:
     def weaponextras(self):
         data = pd.read_csv("output/data/GameAssets/Serial/Data/Master/weapon.csv")
         systemdata = pd.read_csv("output/data/GameAssets/Serial/Data/Message/system_en.txt", delimiter='\t', names=['id', 'value'])
+        contentdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/content.csv")
+        contentdata.query('mes_id_name.str.contains("MAGIC") and mes_id_battle.str.contains("None")', engine='python')
         res_tri = data.trigger_ability_id.unique().tolist()
         res_wat = data.weak_attribute.unique().tolist()
         res_esp = data.effective_species.unique().tolist()
@@ -422,11 +424,14 @@ class rando:
         
         for id, row in jobdata.iterrows():
             muser = randrange(0, 2)
+            if row["id"] == 4:
+                muser = 0
             if muser == 1:
                 cdq = charstatdata.query('job_id == @row["id"]')
                 #print(cdq)
                 if cdq.empty == False:
                     command=random.sample(["10", "11", "12", "13", "14", "16", "17", "19", "20", "22", "23", "25", "26", "27", "28", "31", "34", "0", "0", "0", "0", "0"], 2)
+                    command.sort(reverse=True)
                     c1=str(command[0])
                     c2=str(command[1])
                     #print(cdq["id"].item())
@@ -471,6 +476,7 @@ class rando:
                 cdq = charstatdata.query('job_id == @row["id"]')
                 if cdq.empty == False:
                     command=random.sample(["10", "11", "12", "13", "14", "16", "17", "19", "22", "23", "25", "26", "27", "31", "34", "0", "0", "0", "0", "0"], 3)
+                    command.sort(reverse=True)
                     c1=str(command[0])
                     c2=str(command[1])
                     c3=str(command[2])
@@ -509,6 +515,141 @@ class rando:
         charstatdata.to_csv('output/data/GameAssets/Serial/Data/Master/character_status.csv', index=False, encoding='utf-8')
         #pp = printer.magiclist("bah")
         #print(pp)      
+
+    def learningtiers(self):
+        jobdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/job.csv") 
+        contentdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/content.csv")
+        abilitydata = pd.read_csv("output/data/GameAssets/Serial/Data/Master/ability.csv")
+        learningdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/learning.csv", nrows=0)
+        charstatdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/character_status.csv")
+        cq = contentdata.query('mes_id_name.str.contains("MAGIC") and mes_id_battle.str.contains("None")', engine='python')
+        spelltierlist = pd.read_csv("Data/Extra/spell_tier.csv")
+        masterid = 1
+        #print(cq)
+        #print(abilitydata)
+        
+        for id, row in cq.iterrows():
+            #print(row["type_value"])
+            adq = abilitydata.query('sort_id == @row["type_value"]')
+            val = adq.index.values.astype(int)[0]
+            #val = int(val)
+            #print(val)
+            #print(abilitydata.loc[val, ])
+            if abilitydata.at[val, 'type_id'] == int("4"):
+                abilitydata.at[val, 'type_id'] = int("4")
+            else:
+                abilitydata.at[val, 'type_id'] = int("2")
+            #abilitydata._set_value(val, 'type_id', int('1'))
+        #print(abilitydata.dtypes)
+        abilitydata.to_csv('output/data/GameAssets/Serial/Data/Master/ability.csv', index=False, encoding='utf-8')
+
+        
+        for id, row in jobdata.iterrows():
+            muser = randrange(0, 2)
+            if muser == 1:
+                cdq = charstatdata.query('job_id == @row["id"]')
+                #print(cdq)
+                if cdq.empty == False:
+                    command=random.sample(["10", "11", "12", "13", "14", "16", "17", "19", "20", "22", "23", "25", "26", "27", "28", "31", "34", "0", "0", "0", "0", "0"], 2)
+                    command.sort(reverse=True)
+                    c1=str(command[0])
+                    c2=str(command[1])
+                    #print(cdq["id"].item())
+                    #print(charstatdata)
+                    #charstatdata.at[cdq["id"].item()-1, "lv"]=str("1")
+                    #charstatdata.at[cdq["id"].item()-1, "exp"]=str("0")
+                    #print(row)
+                    if charstatdata.at[cdq["id"].item()-1, "id"] == 13:
+                        charstatdata.at[cdq["id"].item()-1, "hp"]=600
+                    else:
+                        charstatdata.at[cdq["id"].item()-1, "hp"]=randrange(int(cdq["lv"]*20), int(cdq["lv"]*60))
+                    charstatdata.at[cdq["id"].item()-1, "mp"]=randrange(int(cdq["lv"]*2), int(cdq["lv"]*10))
+                    charstatdata.at[cdq["id"].item()-1, "strength"]=randrange(int(cdq["lv"]/2), int(cdq["lv"]*1.5))
+                    charstatdata.at[cdq["id"].item()-1, "vitality"]=randrange(int(cdq["lv"]/2), int(cdq["lv"]*1.5))
+                    charstatdata.at[cdq["id"].item()-1, "agility"]=randrange(int(cdq["lv"]/2), int(cdq["lv"]*1.5))
+                    charstatdata.at[cdq["id"].item()-1, "intelligence"]=randrange(int(cdq["lv"]/2), int(cdq["lv"]*1.5))
+                    charstatdata.at[cdq["id"].item()-1, "spirit"]=randrange(int(cdq["lv"]/2), int(cdq["lv"]*1.5))
+                    charstatdata.at[cdq["id"].item()-1, "luck"]=randrange(20, 51)
+                    charstatdata.at[cdq["id"].item()-1, "command_id1"]=str("1")
+                    charstatdata.at[cdq["id"].item()-1, "command_id2"]=str("8")
+                    charstatdata.at[cdq["id"].item()-1, "command_id3"]=c1
+                    charstatdata.at[cdq["id"].item()-1, "command_id4"]=c2
+                    charstatdata.at[cdq["id"].item()-1, "command_id5"]=str("3")                    
+                looper=randrange(20, 51)
+                #print(muser, looper)
+                i = 1
+                while i < looper:
+                    
+                    sp = cq["id"].sample(replace=True).item()
+
+                    lvl=randrange(1, 81)
+                    if lvl < 15:
+                        spq = spelltierlist.query("tier == 1")
+                        sp = spq["con_id"].sample(replace=True).item()
+                    elif lvl < 30:
+                        spq = spelltierlist.query("tier == 2")
+                        sp = spq["con_id"].sample(replace=True).item()                        
+                    elif lvl < 45:
+                        spq = spelltierlist.query("tier == 3")
+                        sp = spq["con_id"].sample(replace=True).item()                        
+                    elif lvl < 60:
+                        spq = spelltierlist.query("tier == 4")
+                        sp = spq["con_id"].sample(replace=True).item()                        
+                    #lvl=randrange(1, 151)
+                    #print(sp)
+                    new_row = {'id':masterid, 'type_id':1, 'value1':lvl, 'value2':0, 'job_id':row["id"], 'content_id':sp}
+                    #print(new_row)
+                    #learningdata = learningdata.concat(new_row, ignore_index=True)
+                    
+                    #print(masterid, 1, lvl, 0, jobdata["id"], sp)
+                    learningdata = learningdata.append([new_row], ignore_index = True)
+                    #print(learningdata)
+                    i += 1
+                    masterid += 1
+            else:
+                cdq = charstatdata.query('job_id == @row["id"]')
+                if cdq.empty == False:
+                    command=random.sample(["10", "11", "12", "13", "14", "16", "17", "19", "22", "23", "25", "26", "27", "31", "34", "0", "0", "0", "0", "0"], 3)
+                    command.sort(reverse=True)
+                    c1=str(command[0])
+                    c2=str(command[1])
+                    c3=str(command[2])
+                    #print("CSTUFF" + c1, c2, c3, cdq)
+                    #charstatdata.at[cdq["id"].item()-1, "lv"]=str("1")
+                    #charstatdata.at[cdq["id"].item()-1, "exp"]=str("0")
+                    #print(row)
+                    #print(charstatdata.at[cdq["id"].item()-1, "id"])
+                    if charstatdata.at[cdq["id"].item()-1, "id"] == 13:
+                        charstatdata.at[cdq["id"].item()-1, "hp"]=600
+                    else:
+                        charstatdata.at[cdq["id"].item()-1, "hp"]=randrange(int(cdq["lv"]*20), int(cdq["lv"]*60))
+                    charstatdata.at[cdq["id"].item()-1, "mp"]=str("0")
+                    charstatdata.at[cdq["id"].item()-1, "strength"]=randrange(int(cdq["lv"]/2), int(cdq["lv"]*1.5))
+                    charstatdata.at[cdq["id"].item()-1, "vitality"]=randrange(int(cdq["lv"]/2), int(cdq["lv"]*1.5))
+                    charstatdata.at[cdq["id"].item()-1, "agility"]=randrange(int(cdq["lv"]/2), int(cdq["lv"]*1.5))
+                    charstatdata.at[cdq["id"].item()-1, "intelligence"]=randrange(int(cdq["lv"]/2), int(cdq["lv"]*1.5))
+                    charstatdata.at[cdq["id"].item()-1, "spirit"]=randrange(int(cdq["lv"]/2), int(cdq["lv"]*1.5))
+                    charstatdata.at[cdq["id"].item()-1, "luck"]=randrange(20, 51)
+                    charstatdata.at[cdq["id"].item()-1, "command_id1"]=str("1")
+                    charstatdata.at[cdq["id"].item()-1, "command_id2"]=c1
+                    charstatdata.at[cdq["id"].item()-1, "command_id3"]=c2
+                    charstatdata.at[cdq["id"].item()-1, "command_id4"]=c3
+                    charstatdata.at[cdq["id"].item()-1, "command_id5"]=str("3")  
+        #print(learningdata)   
+        systemdata = pd.read_csv("output/data/GameAssets/Serial/Data/Message/system_en.txt", delimiter='\t', names=['id', 'value'])
+        #print(systemdata)
+        sdq = systemdata.query('id.str.contains("MSG_SYSTEM_092")')
+        #print(systemdata)
+        val = sdq.index.values.astype(int)[0]
+        systemdata.at[val, 'value'] = 'All Magic'
+
+        
+        systemdata.to_csv('output/data/GameAssets/Serial/Data/Message/system_en.txt', index=False, header=False, sep='\t', encoding='utf-8')
+        learningdata.to_csv('output/data/GameAssets/Serial/Data/Master/learning.csv', index=False, encoding='utf-8')   
+        charstatdata.to_csv('output/data/GameAssets/Serial/Data/Master/character_status.csv', index=False, encoding='utf-8')
+        #pp = printer.magiclist("bah")
+        #print(pp)      
+
         
     def chests(self):
         contentdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/content.csv")
