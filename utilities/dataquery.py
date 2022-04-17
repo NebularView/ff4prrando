@@ -38,7 +38,30 @@ class dataquery:
         return(sdout)
                  
         pass
+
+    def contentdataqueryability(self):
+        
+        contentdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/content.csv")
+        systemdata = pd.read_csv("Data/GameAssets/Serial/Data/Message/system_en.txt", delimiter='\t', names=['id', 'value'])
+        print(self.value)
+        cq = contentdata.query('type_id == 4 and type_value == @self.value')
     
+        #print (cq)
+        print(cq)
+        q2 = cq['mes_id_name'].item()
+    
+        #print (q2)
+    
+        sq = systemdata.query('id == @q2')
+    
+        #print (sq)
+    
+        sdout = sq['value'].item()
+        
+        return(sdout)
+                 
+        pass
+
     def sysdataquery(self):
         
         systemdata = pd.read_csv("Data/GameAssets/Serial/Data/Message/system_en.txt", delimiter='\t', names=['id', 'value'])
@@ -138,7 +161,7 @@ class dataquery:
     
         #print (cq)
         
-        #print(cq)
+        #print(cq['mes_id_name'])
     
         q2 = cq['mes_id_name'].item()
         

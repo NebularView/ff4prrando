@@ -20,3 +20,6 @@ MSG_SYSTEM_166  No Special Values
 MSG_SYSTEM_167  Status: Pig Pig
 
 Test
+        spelltierlist = pd.read_csv("Data/Extra/spell_tier.csv")
+        spq = spelltierlist.query("tier == 1")
+        sp = spq["con_id"].sample(replace=True).item()

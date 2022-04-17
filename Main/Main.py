@@ -154,12 +154,12 @@ if __name__ == '__main__':
     
     if wegbool == "Y":
         print("Adjusting weapon elements, attributes and group effectiveness")
-        r1.weaponextras()
+        r1.weaponmonextras()
         print("Complete")
     
     if leabool == "Y":
         print("Adjusting commands and spell capabilities")
-        r1.learningtiers()
+        r1.learningmontiers()
         print("Complete")
     
     if monbool == "Y":

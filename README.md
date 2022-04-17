@@ -15,3 +15,5 @@ I have really no idea what I am doing however, this should randomize the followi
 * monster command descriptions
 * chest contents
 * shop contents
+
+To use, install the requirements, then run Main/Main.py.  You will then need to move the output/data/GameAssets folder into the corresponding folder in your memoria installed ff4pr folder.

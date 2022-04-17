@@ -1,103 +1,103 @@
 ab_id,ab_cost,ab_power,con_id,sys_name,tier
-47,0,4,357, <IC_BMGC>Osmose,2
-58,0,200,368, Double Meteor,4
-94,0,2,404, Cold Mist,3
-95,0,0,405, Needle,1
-97,0,0,407, Tornado,3
-98,0,0,408, Curse,2
-99,0,0,409, Counter Horn,2
-100,0,0,410, Dancing,2
-101,0,0,411, Cursed Elegy,2
-102,0,0,412, Lick,1
-103,0,6,413, Bloodfeast,1
-104,0,0,414, Constrict,2
-105,0,0,415, Regenerate,2
-106,0,0,416, Self-Destruct,2
-107,0,0,417, Fission,3
-108,0,0,418, Chain Reaction,4
-109,0,0,419, Thunderbolt,4
-110,0,0,420, Tsunami,3
-111,0,0,421, Hex,2
-112,0,0,422, Bad Breath,3
-113,0,0,423, Dark Breath,2
-114,0,0,424, Retreat,2
-115,0,0,425, Magnetic Radiation,2
-116,0,8,426, Explode,2
-117,0,0,427, <IC_WMGC>Full-Life,4
-118,0,0,428, Stone Gaze,3
-119,0,0,429, Peck,1
-120,0,0,430, Poison Powder,2
-121,0,0,431, Entice,2
-122,0,0,432, Ray,2
-123,0,0,433, Glare,2
-124,0,0,434, Lightning,3
-125,0,0,435, Flame,3
-126,0,0,436, Blaze,3
-127,0,3,437, Pollen,1
-128,0,15,438, Digestive Acid,2
-129,0,0,439, Ninth Dimension,2
-130,0,0,440, Crush,1
-131,0,0,441, Black Fangs,1
-132,0,0,442, Ice Bind,2
-133,0,0,443, Tidal Wave,2
-134,0,5,444, Flame Thrower,2
-135,0,90,445, Inferno,3
-136,0,0,446, Sleeping Gas,2
-137,0,0,447, Piercing Laser,2
-138,0,2,448, Poison Gas,1
-139,0,0,449, Beam,1
-140,0,0,450, Laser,1
-141,0,0,451, Panacea,2
-142,0,255,452, Globe 199,4
-143,0,0,453, Ice Storm,3
-144,0,40,454, Zantetsuken,3
-145,0,20,455, Earthquake,2
-146,0,0,456, Mind Blast,2
-147,0,0,457, Maelstrom,1
-148,0,0,458, Whirl,1
-149,0,255,459, Mega Flare,4
-150,0,50,460, Big Bang,3
-153,0,0,463, Black Hole,3
-154,0,0,464, Absorb,2
-155,0,0,465, Gaze,1
-156,0,15,466, Heat Ray,2
-157,0,0,467, Slap,1
-158,0,0,468, Blaster,4
-159,0,0,469, Embrace,3
-160,0,0,470, Restore,2
-161,0,0,471, Time Distortion,2
-162,0,0,472, Doom,2
-163,0,10,473, Dancing Dagger,2
-164,0,7,474, Magic Arrow,2
-211,0,3,523, Heal,1
-212,0,0,524, Basuna,1
-213,0,0,525, Poisona,1
-234,0,0,546, Doom,2
-259,0,0,571, Needle,1
-260,0,0,572, Tornado,3
-261,0,6,573, Bloodfeast,2
-262,0,0,574, Constrict,3
-263,0,0,575, Stone Gaze,3
-264,0,0,576, Peck,1
-265,0,0,577, Entice,2
-266,0,0,578, Flame,3
-267,0,0,579, Ice Storm,3
-268,0,20,580, Earthquake,3
-269,0,0,581, Blaster,4
-270,0,0,582, Embrace,3
-277,0,0,589, Ice Bind,3
-326,0,0,638, Panacea,1
-335,0,0,647, Magnetic Radiation,1
-348,0,64,660, Inferno,3
-349,0,0,661, Tidal Wave,3
-386,0,0,698, Bad Breath,3
-409,0,0,721, Beam,2
-460,0,0,772, <IC_WMGC>Slow,1
-461,0,0,773, <IC_WMGC>Hold,2
-477,0,32,789, <IC_BMGC>Bio,3
-478,0,64,790, <IC_BMGC>Firaga,3
-479,0,64,791, <IC_BMGC>Thundaga,3
-480,0,64,792, <IC_BMGC>Blizzaga,3
-481,0,200,793, <IC_BMGC>Meteor,4
-482,0,85,794, <IC_WMGC>Holy,4
-483,0,20,795, Flame,3
+47,0,4,357,Osmose,2
+58,0,200,368,Double Meteor,5
+94,0,2,404,Cold Mist,3
+95,0,0,405,Needle,1
+97,0,0,407,Tornado,3
+98,0,0,408,Curse,2
+99,0,0,409,Counter Horn,2
+100,0,0,410,Dancing,2
+101,0,0,411,Cursed Elegy,2
+102,0,0,412,Lick,1
+103,0,6,413,Bloodfeast,1
+104,0,0,414,Constrict,2
+105,0,0,415,Regenerate,2
+106,0,0,416,Self-Destruct,2
+107,0,0,417,Fission,3
+108,0,0,418,Chain Reaction,5
+109,0,0,419,Thunderbolt,4
+110,0,0,420,Tsunami,3
+111,0,0,421,Hex,2
+112,0,0,422,Bad Breath,3
+113,0,0,423,Dark Breath,2
+114,0,0,424,Retreat,2
+115,0,0,425,Magnetic Radiation,2
+116,0,8,426,Explode,2
+117,0,0,427,Full-Life,4
+118,0,0,428,Stone Gaze,3
+119,0,0,429,Peck,1
+120,0,0,430,Poison Powder,2
+121,0,0,431,Entice,2
+122,0,0,432,Ray,2
+123,0,0,433,Glare,2
+124,0,0,434,Lightning,3
+125,0,0,435,Flame,3
+126,0,0,436,Blaze,3
+127,0,3,437,Pollen,1
+128,0,15,438,Digestive Acid,2
+129,0,0,439,Ninth Dimension,2
+130,0,0,440,Crush,1
+131,0,0,441,Black Fangs,1
+132,0,0,442,Ice Bind,2
+133,0,0,443,Tidal Wave,2
+134,0,5,444,Flame Thrower,2
+135,0,90,445,Inferno,3
+136,0,0,446,Sleeping Gas,2
+137,0,0,447,Piercing Laser,2
+138,0,2,448,Poison Gas,1
+139,0,0,449,Beam,1
+140,0,0,450,Laser,1
+141,0,0,451,Panacea,2
+142,0,255,452,Globe 199,5
+143,0,0,453,Ice Storm,3
+144,0,40,454,Zantetsuken,3
+145,0,20,455,Earthquake,2
+146,0,0,456,Mind Blast,2
+147,0,0,457,Maelstrom,1
+148,0,0,458,Whirl,1
+149,0,255,459,Mega Flare,5
+150,0,50,460,Big Bang,3
+153,0,0,463,Black Hole,3
+154,0,0,464,Absorb,2
+155,0,0,465,Gaze,1
+156,0,15,466,Heat Ray,2
+157,0,0,467,Slap,1
+158,0,0,468,Blaster,4
+159,0,0,469,Embrace,3
+160,0,0,470,Restore,2
+161,0,0,471,Time Distortion,2
+162,0,0,472,Doom,2
+163,0,10,473,Dancing Dagger,2
+164,0,7,474,Magic Arrow,2
+211,0,3,523,Heal,1
+212,0,0,524,Basuna,1
+213,0,0,525,Poisona,1
+234,0,0,546,Doom,2
+259,0,0,571,Needle,1
+260,0,0,572,Tornado,3
+261,0,6,573,Bloodfeast,2
+262,0,0,574,Constrict,3
+263,0,0,575,Stone Gaze,3
+264,0,0,576,Peck,1
+265,0,0,577,Entice,2
+266,0,0,578,Flame,3
+267,0,0,579,Ice Storm,3
+268,0,20,580,Earthquake,3
+269,0,0,581,Blaster,4
+270,0,0,582,Embrace,3
+277,0,0,589,Ice Bind,3
+326,0,0,638,Panacea,1
+335,0,0,647,Magnetic Radiation,1
+348,0,64,660,Inferno,3
+349,0,0,661,Tidal Wave,3
+386,0,0,698,Bad Breath,3
+409,0,0,721,Beam,2
+460,0,0,772,Slow,1
+461,0,0,773,Hold,2
+477,0,32,789,Bio,3
+478,0,64,790,Firaga,3
+479,0,64,791,Thundaga,3
+480,0,64,792,Blizzaga,3
+481,0,200,793,Meteor,5
+482,0,85,794,Holy,4
+483,0,20,795,Flame,3
