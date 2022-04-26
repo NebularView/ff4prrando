@@ -738,23 +738,22 @@ class rando:
                 looper=randrange(20, 51)
                 #print(muser, looper)
                 i = 1
+                spq1 = spelltierlist.query("tier == 1")
+                spq2 = spelltierlist.query("tier == 2")  
+                spq3 = spelltierlist.query("tier == 3")  
+                spq4 = spelltierlist.query("tier == 4")
                 while i < looper:
                     
-                    sp = cq["id"].sample(replace=True).item()
                     #Meat that does spell tiering pulled from list of spells in the Extras folder
                     lvl=randrange(1, 81)
                     if lvl < 15:
-                        spq = spelltierlist.query("tier == 1")
-                        sp = spq["con_id"].sample(replace=True).item()
+                        sp = spq1["con_id"].sample(replace=False).item()
                     elif lvl < 30:
-                        spq = spelltierlist.query("tier == 2")
-                        sp = spq["con_id"].sample(replace=True).item()                        
+                        sp = spq2["con_id"].sample(replace=False).item()                        
                     elif lvl < 45:
-                        spq = spelltierlist.query("tier == 3")
-                        sp = spq["con_id"].sample(replace=True).item()                        
+                        sp = spq3["con_id"].sample(replace=False).item()                        
                     elif lvl < 60:
-                        spq = spelltierlist.query("tier == 4")
-                        sp = spq["con_id"].sample(replace=True).item()                        
+                        sp = spq4["con_id"].sample(replace=False).item()                        
                     #lvl=randrange(1, 151)
                     #print(sp)
                     new_row = {'id':masterid, 'type_id':1, 'value1':lvl, 'value2':0, 'job_id':row["id"], 'content_id':sp}
@@ -876,25 +875,27 @@ class rando:
                 looper=randrange(20, 51)
                 #print(muser, looper)
                 i = 1
+                spq1 = spelltierlist.query("tier == 1")
+                spq2 = spelltierlist.query("tier == 2")  
+                spq3 = spelltierlist.query("tier == 3")  
+                spq4 = spelltierlist.query("tier == 4")
                 while i < looper:
-                    
-                    sp = cq["id"].sample(replace=True).item()
-
                     lvl=randrange(1, 81)
                     if lvl < 15:
-                        spq = spelltierlist.query("tier == 1")
-                        sp = spq["con_id"].sample(replace=True).item()
+
+                        sp = spq1["con_id"].sample(replace=False).item()
                     elif lvl < 30:
-                        spq = spelltierlist.query("tier == 2")
-                        sp = spq["con_id"].sample(replace=True).item()                        
+
+                        sp = spq2["con_id"].sample(replace=False).item()                        
                     elif lvl < 45:
-                        spq = spelltierlist.query("tier == 3")
-                        sp = spq["con_id"].sample(replace=True).item()                        
+                        
+                        sp = spq3["con_id"].sample(replace=False).item()                        
                     elif lvl < 60:
-                        spq = spelltierlist.query("tier == 4")
-                        sp = spq["con_id"].sample(replace=True).item()                        
+
+                        sp = spq4["con_id"].sample(replace=False).item()                        
                     #lvl=randrange(1, 151)
                     #print(sp)
+                    #print("test" + str(sp))
                     new_row = {'id':masterid, 'type_id':1, 'value1':lvl, 'value2':0, 'job_id':row["id"], 'content_id':sp}
                     #print(new_row)
                     #learningdata = learningdata.concat(new_row, ignore_index=True)
@@ -938,23 +939,21 @@ class rando:
                 looper=randrange(20, 51)
                 #print(muser, looper)
                 i = 1
+                spq1 = monspelltierlist.query("tier == 1")
+                spq2 = monspelltierlist.query("tier == 2")
+                spq3 = monspelltierlist.query("tier == 3")
+                spq4 = monspelltierlist.query("tier == 4")
                 while i < looper:
-                    
-                    sp = cq["id"].sample(replace=True).item()
 
                     lvl=randrange(1, 81)
-                    if lvl < 15:
-                        spq = monspelltierlist.query("tier == 1")
-                        sp = spq["con_id"].sample(replace=True).item()
+                    if lvl < 15:                        
+                        sp = spq1["con_id"].sample(replace=False).item()
                     elif lvl < 30:
-                        spq = monspelltierlist.query("tier == 2")
-                        sp = spq["con_id"].sample(replace=True).item()                        
+                        sp = spq2["con_id"].sample(replace=False).item()                        
                     elif lvl < 45:
-                        spq = monspelltierlist.query("tier == 3")
-                        sp = spq["con_id"].sample(replace=True).item()                        
+                        sp = spq3["con_id"].sample(replace=False).item()                        
                     elif lvl < 60:
-                        spq = monspelltierlist.query("tier == 4")
-                        sp = spq["con_id"].sample(replace=True).item()                        
+                        sp = spq4["con_id"].sample(replace=False).item()                        
                     #lvl=randrange(1, 151)
                     #print(sp)
                     new_row = {'id':masterid, 'type_id':1, 'value1':lvl, 'value2':0, 'job_id':row["id"], 'content_id':sp}
@@ -1126,7 +1125,7 @@ class rando:
 
     def monsterdropstiers(self):
         #Tiered version of above
-        monsterdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/monster.csv")
+        monsterdata = pd.read_csv("output/data/GameAssets/Serial/Data/Master/monster.csv")
         itemtierdata = pd.read_csv("Data/Extra/item_tier.csv")
         for id, row in monsterdata.iterrows():
             #DAMNIT LUGAE, only stupid monster that drops a key item
@@ -1149,6 +1148,24 @@ class rando:
                     monsterdata._set_value(id, 'drop_content_id4', sp)
                     sp = itier["id"].sample(replace=True).item()
                     monsterdata._set_value(id, 'drop_content_id5', sp)
+        monsterdata.to_csv('output/data/GameAssets/Serial/Data/Master/monster.csv', index=False, encoding='utf-8')
+        
+    def monsterpercen(self):
+        #Tiered version of above
+        monsterdata = pd.read_csv("output/data/GameAssets/Serial/Data/Master/monster.csv")
+        #Weapons by percentages
+        for index, row in monsterdata.iterrows():
+            monsterdata._set_value(index, 'defense', randrange(int(row["defense"]/2), int(row["defense"]*1.5+1)))
+            monsterdata._set_value(index, 'ability_defense', randrange(int(row["ability_defense"]/2), int(row["ability_defense"]*1.5+1)))
+            monsterdata._set_value(index, 'hp', randrange(int(row["hp"]/2), int(row["hp"]*1.5+1)))
+            monsterdata._set_value(index, 'mp', randrange(int(row["mp"]/2), int(abs(row["mp"]*1.5+1))))
+            monsterdata._set_value(index, 'exp', randrange(int(row["exp"]*1.5), int(abs(row["exp"]*4+1))))
+            monsterdata._set_value(index, 'gill', row["gill"]*4)
+            monsterdata._set_value(index, 'attack', randrange(int(row["attack"]/2), int(row["attack"]*1.5+1)))
+            monsterdata._set_value(index, 'agility', randrange(int(row["agility"]/2), int(row["agility"]*1.5+1)))
+            monsterdata._set_value(index, 'intelligence', randrange(int(row["intelligence"]/2), int(row["intelligence"]*1.5+1)))
+            monsterdata._set_value(index, 'spirit', randrange(int(row["spirit"]/2), int(abs(row["spirit"]*1.5+1))))
+            monsterdata._set_value(index, 'magic', randrange(int(row["magic"]/2), int(abs(row["magic"]*1.5+1))))
         monsterdata.to_csv('output/data/GameAssets/Serial/Data/Master/monster.csv', index=False, encoding='utf-8')
 
 
@@ -1254,6 +1271,58 @@ class rando:
                 itier4=itemtierdata.query('tier == @tier+1')
             sampler = itier["id"].to_list() + itier2["id"].to_list() + itier3["id"].to_list() + itier4["id"].to_list()
             num=randrange(5, 16)
+            i=1
+            while i < num:
+                sp = random.sample(sampler, 1)[0]
+                new_row = {'id':masterid, 'content_id':sp, 'group_id':shop, 'coefficient':0, 'purchase_limit':0}
+                producttemp = producttemp.append([new_row], ignore_index = True)
+                i += 1
+                masterid +=1
+        
+        for id, row in pq2.iterrows():
+            #print(row)
+            row._set_value("id", masterid)
+            #print(row)
+            producttemp = producttemp.append([row], ignore_index = True)
+            masterid +=1
+        
+        producttemp.to_csv('output/data/GameAssets/Serial/Data/Master/product.csv', index=False, encoding='utf-8')
+
+    def shopstierstypes(self):
+        #Shop tiered randomization
+        productdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/product.csv")
+        shoptierdata = pd.read_csv("Data/Extra/shop_tier.csv")
+        #maptierdata = pd.read_csv("Data/map_tier.csv")
+        itemtierdata = pd.read_csv("Data/Extra/item_tier.csv")
+        pq2 = productdata.query('content_id == 0')
+        producttemp = pd.read_csv("Data/GameAssets/Serial/Data/Master/product.csv", nrows=0)
+        masterid = 1
+        
+        for index, row in shoptierdata.iterrows():
+            tier = row["tier"]
+            itype = row["type"]
+            shop = row["group_id"]
+            if tier == 1:
+                itier=itemtierdata.query('tier == @tier and type == @itype')
+                itier2=itemtierdata.query('tier == @tier and type == @itype')
+                itier3=itemtierdata.query('tier == @tier+1 and type == @itype')
+                itier4=itemtierdata.query('tier == @tier+1 and type == @itype')
+                new_row = {'id':masterid, 'content_id':2, 'group_id':shop, 'coefficient':0, 'purchase_limit':0}
+                producttemp = producttemp.append([new_row], ignore_index = True)
+                new_row = {'id':masterid, 'content_id':21, 'group_id':shop, 'coefficient':0, 'purchase_limit':0}
+                producttemp = producttemp.append([new_row], ignore_index = True)
+            elif tier == 9:
+                itier=itemtierdata.query('tier == @tier and type == @itype')
+                itier2=itemtierdata.query('tier == @tier and type == @itype')
+                itier3=itemtierdata.query('tier == @tier-1 and type == @itype')
+                itier4=itemtierdata.query('tier == @tier-1 and type == @itype')
+            else:
+                itier=itemtierdata.query('tier == @tier and type == @itype')
+                itier2=itemtierdata.query('tier == @tier and type == @itype')
+                itier3=itemtierdata.query('tier == @tier-1 and type == @itype')
+                itier4=itemtierdata.query('tier == @tier+1 and type == @itype')
+            sampler = itier["id"].to_list() + itier2["id"].to_list() + itier3["id"].to_list() + itier4["id"].to_list()
+            num=randrange(2, 8)
             i=1
             while i < num:
                 sp = random.sample(sampler, 1)[0]

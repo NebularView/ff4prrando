@@ -29,7 +29,7 @@ id,map_name,PlainTxt_Map,PT_title,PT_area_id,map_title,bgm_id,area_id,PT_BGM,tie
 28,Map_20021_4,Town of Baron - (ROZA)'s House,(ROZA)'s House,Town of Baron,MSG_MAP_NAME_46,5,5,Prologue,1
 29,Map_20021_5,Town of Baron - Devil's Road,Devil's Road,Town of Baron,MSGARA_NAME_10,5,5,Prologue,1
 30,Map_20021_6,Town of Baron - Training Room,Training Room,Town of Baron,MSG_MAP_NAME_47,5,5,Prologue,1
-31,Map_20021_7,Town of Baron - Armor & Weapons Shop,Armor & Weapons Shop,Town of Baron,MSGARA_NAME_08,5,5,Prologue,4
+31,Map_20021_7,Town of Baron - Armor & Weapons Shop,Armor & Weapons Shop,Town of Baron,MSGARA_NAME_08,5,5,Prologue,5
 32,Map_20030,"Kaipo, Oasis of the Desert",,"Kaipo, Oasis of the Desert",None,5,7,Prologue,2
 33,Map_20031_1,"Kaipo, Oasis of the Desert - Weapon Shop",Weapon Shop,"Kaipo, Oasis of the Desert",MSGARA_NAME_06,5,7,Prologue,2
 34,Map_20031_2,"Kaipo, Oasis of the Desert - Inn & Item Shop",Inn & Item Shop,"Kaipo, Oasis of the Desert",MSGARA_NAME_04,5,7,Prologue,2
@@ -42,29 +42,29 @@ id,map_name,PlainTxt_Map,PT_title,PT_area_id,map_title,bgm_id,area_id,PT_BGM,tie
 41,Map_20041_3,Damcyan Castle - 3F,3F,Damcyan Castle,MSGARA_NAME_22,15,8,Rydia,2
 42,Map_20041_4,Damcyan Castle - Jail,Jail,Damcyan Castle,MSGARA_NAME_55,15,8,Rydia,2
 43,Map_20041_5,Damcyan Castle - Jail B1,Jail B1,Damcyan Castle,MSGARA_NAME_56,15,8,Rydia,2
-44,Map_20050_1,Fabul Castle,,Fabul Castle,None,19,9,Mt. Ordeals,2
-45,Map_20051_1,Fabul Castle - 1F,1F,Fabul Castle,MSGARA_NAME_20,19,9,Mt. Ordeals,2
-46,Map_20051_2,Fabul Castle - 2F,2F,Fabul Castle,MSGARA_NAME_21,19,9,Mt. Ordeals,2
-47,Map_20051_3,Fabul Castle - Throne Room,Throne Room,Fabul Castle,MSGARA_NAME_37,19,9,Mt. Ordeals,2
-48,Map_20051_4,Fabul Castle - Crystal Room,Crystal Room,Fabul Castle,MSGARA_NAME_09,69,9,The Prelude,2
-49,Map_20051_5,Fabul Castle - Inn & Item Shop,Inn & Item Shop,Fabul Castle,MSGARA_NAME_04,19,9,Mt. Ordeals,2
-50,Map_20051_6,Fabul Castle - Armor & Weapons Shop,Armor & Weapons Shop,Fabul Castle,MSGARA_NAME_08,19,9,Mt. Ordeals,2
-51,Map_20051_7,Fabul Castle - West Tower 1F,West Tower 1F,Fabul Castle,MSGARA_NAME_11,19,9,Mt. Ordeals,2
-52,Map_20051_8,Fabul Castle - West Tower 2F,West Tower 2F,Fabul Castle,MSGARA_NAME_12,19,9,Mt. Ordeals,2
-53,Map_20051_9,Fabul Castle - West Tower 3F,West Tower 3F,Fabul Castle,MSGARA_NAME_13,19,9,Mt. Ordeals,2
-54,Map_20051_10,Fabul Castle - East Tower 1F,East Tower 1F,Fabul Castle,MSGARA_NAME_14,19,9,Mt. Ordeals,2
-55,Map_20051_11,Fabul Castle - East Tower 2F,East Tower 2F,Fabul Castle,MSGARA_NAME_15,19,9,Mt. Ordeals,2
-56,Map_20051_12,Fabul Castle - East Tower 3F,East Tower 3F,Fabul Castle,MSGARA_NAME_16,19,9,Mt. Ordeals,2
-57,Map_20060,Mysidia,,Mysidia,None,24,10,"Hey, Cid!",3
-58,Map_20061_1,Mysidia - Manor of Prayers,Manor of Prayers,Mysidia,MSG_MAP_NAME_48,24,10,"Hey, Cid!",3
-59,Map_20061_2,Mysidia - Crystal Room,Crystal Room,Mysidia,MSGARA_NAME_09,69,10,The Prelude,3
-60,Map_20061_3,Mysidia - Tower of Worship,Tower of Worship,Mysidia,MSG_MAP_NAME_87,25,10,Mystic Mysidia,3
-61,Map_20061_4,Mysidia - Weapon Shop,Weapon Shop,Mysidia,MSGARA_NAME_06,24,10,"Hey, Cid!",3
-62,Map_20061_5,Mysidia - Armor Shop,Armor Shop,Mysidia,MSGARA_NAME_07,24,10,"Hey, Cid!",3
-63,Map_20061_6,Mysidia - Pub,Pub,Mysidia,MSGARA_NAME_02,24,10,"Hey, Cid!",3
-64,Map_20061_7,Mysidia - Inn,Inn,Mysidia,MSGARA_NAME_01,24,10,"Hey, Cid!",3
-65,Map_20061_8,Mysidia - Item Shop,Item Shop,Mysidia,MSGARA_NAME_05,24,10,"Hey, Cid!",3
-66,Map_20061_9,Mysidia - Devil's Road,Devil's Road,Mysidia,MSGARA_NAME_10,24,10,"Hey, Cid!",3
+44,Map_20050_1,Fabul Castle,,Fabul Castle,None,19,9,Mt. Ordeals,3
+45,Map_20051_1,Fabul Castle - 1F,1F,Fabul Castle,MSGARA_NAME_20,19,9,Mt. Ordeals,3
+46,Map_20051_2,Fabul Castle - 2F,2F,Fabul Castle,MSGARA_NAME_21,19,9,Mt. Ordeals,3
+47,Map_20051_3,Fabul Castle - Throne Room,Throne Room,Fabul Castle,MSGARA_NAME_37,19,9,Mt. Ordeals,3
+48,Map_20051_4,Fabul Castle - Crystal Room,Crystal Room,Fabul Castle,MSGARA_NAME_09,69,9,The Prelude,3
+49,Map_20051_5,Fabul Castle - Inn & Item Shop,Inn & Item Shop,Fabul Castle,MSGARA_NAME_04,19,9,Mt. Ordeals,3
+50,Map_20051_6,Fabul Castle - Armor & Weapons Shop,Armor & Weapons Shop,Fabul Castle,MSGARA_NAME_08,19,9,Mt. Ordeals,3
+51,Map_20051_7,Fabul Castle - West Tower 1F,West Tower 1F,Fabul Castle,MSGARA_NAME_11,19,9,Mt. Ordeals,3
+52,Map_20051_8,Fabul Castle - West Tower 2F,West Tower 2F,Fabul Castle,MSGARA_NAME_12,19,9,Mt. Ordeals,3
+53,Map_20051_9,Fabul Castle - West Tower 3F,West Tower 3F,Fabul Castle,MSGARA_NAME_13,19,9,Mt. Ordeals,3
+54,Map_20051_10,Fabul Castle - East Tower 1F,East Tower 1F,Fabul Castle,MSGARA_NAME_14,19,9,Mt. Ordeals,3
+55,Map_20051_11,Fabul Castle - East Tower 2F,East Tower 2F,Fabul Castle,MSGARA_NAME_15,19,9,Mt. Ordeals,3
+56,Map_20051_12,Fabul Castle - East Tower 3F,East Tower 3F,Fabul Castle,MSGARA_NAME_16,19,9,Mt. Ordeals,3
+57,Map_20060,Mysidia,,Mysidia,None,24,10,"Hey, Cid!",4
+58,Map_20061_1,Mysidia - Manor of Prayers,Manor of Prayers,Mysidia,MSG_MAP_NAME_48,24,10,"Hey, Cid!",4
+59,Map_20061_2,Mysidia - Crystal Room,Crystal Room,Mysidia,MSGARA_NAME_09,69,10,The Prelude,4
+60,Map_20061_3,Mysidia - Tower of Worship,Tower of Worship,Mysidia,MSG_MAP_NAME_87,25,10,Mystic Mysidia,4
+61,Map_20061_4,Mysidia - Weapon Shop,Weapon Shop,Mysidia,MSGARA_NAME_06,24,10,"Hey, Cid!",4
+62,Map_20061_5,Mysidia - Armor Shop,Armor Shop,Mysidia,MSGARA_NAME_07,24,10,"Hey, Cid!",4
+63,Map_20061_6,Mysidia - Pub,Pub,Mysidia,MSGARA_NAME_02,24,10,"Hey, Cid!",4
+64,Map_20061_7,Mysidia - Inn,Inn,Mysidia,MSGARA_NAME_01,24,10,"Hey, Cid!",4
+65,Map_20061_8,Mysidia - Item Shop,Item Shop,Mysidia,MSGARA_NAME_05,24,10,"Hey, Cid!",4
+66,Map_20061_9,Mysidia - Devil's Road,Devil's Road,Mysidia,MSGARA_NAME_10,24,10,"Hey, Cid!",4
 67,Map_20070_1,Mist,,Mist,None,5,6,Prologue,4
 68,Map_20071_1,Mist - Weapon Shop,Weapon Shop,Mist,MSGARA_NAME_06,5,6,Prologue,4
 69,Map_20071_2,Mist - Armor Shop,Armor Shop,Mist,MSGARA_NAME_07,5,6,Prologue,4
@@ -83,7 +83,7 @@ id,map_name,PlainTxt_Map,PT_title,PT_area_id,map_title,bgm_id,area_id,PT_BGM,tie
 82,Map_20091_5,Eblan Castle - West Tower 2F,West Tower 2F,Eblan Castle,MSGARA_NAME_12,15,14,Rydia,5
 83,Map_20091_6,Eblan Castle - East Tower 1F,East Tower 1F,Eblan Castle,MSGARA_NAME_14,15,14,Rydia,5
 84,Map_20091_7,Eblan Castle - East Tower 2F,East Tower 2F,Eblan Castle,MSGARA_NAME_15,15,14,Rydia,5
-85,Map_20091_8,Eblan Castle - Underground Passage,Underground Passage,Eblan Castle,MSGARA_NAME_41,15,14,Rydia,5
+85,Map_20091_8,Eblan Castle - Underground Passage,Underground Passage,Eblan Castle,MSGARA_NAME_41,15,14,Rydia,6
 86,Map_20100,Town of Troia,,Town of Troia,None,5,12,Prologue,5
 87,Map_20101_1,Town of Troia - Weapon Shop,Weapon Shop,Town of Troia,MSGARA_NAME_06,5,12,Prologue,5
 88,Map_20101_2,Town of Troia - Armor Shop,Armor Shop,Town of Troia,MSGARA_NAME_07,5,12,Prologue,5
@@ -103,7 +103,7 @@ id,map_name,PlainTxt_Map,PT_title,PT_area_id,map_title,bgm_id,area_id,PT_BGM,tie
 102,Map_20111_6,Troia Castle - B1,B1,Troia Castle,MSGARA_NAME_27,29,11,The Airship,5
 103,Map_20111_7,Troia Castle - B1,B1,Troia Castle,MSGARA_NAME_27,29,11,The Airship,5
 104,Map_20111_8,Troia Castle - Jail B1,Jail B1,Troia Castle,MSGARA_NAME_56,29,11,The Airship,5
-105,Map_20111_9,Troia Castle - B2,B2,Troia Castle,MSGARA_NAME_28,29,11,The Airship,5
+105,Map_20111_9,Troia Castle - B2,B2,Troia Castle,MSGARA_NAME_28,29,11,The Airship,7
 106,Map_20120,Agart,,Agart,None,5,13,Prologue,5
 107,Map_20121_1,Agart - Observatory,Observatory,Agart,MSG_MAP_NAME_52,5,13,Prologue,5
 108,Map_20121_2,Agart - Observation Room,Observation Room,Agart,MSG_MAP_NAME_53,5,13,Prologue,5

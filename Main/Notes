@@ -1,25 +1,39 @@
-FFS ability links to content where ability.id = content.type_value AND content.type_id=4
-
-.. why four, i'm not sure
- 
-in weapon trigger_ability_id is use ability from ability.csv
-
-Attribute id
-1 - Fire
-2 - Ice
-3 - Lightening
-4 - Dark
-5 - Holy
-6 - Projectiles
-
-
-MSG_SYSTEM_166  Empty
-MSG_SYSTEM_167  None
-
-MSG_SYSTEM_166  No Special Values
-MSG_SYSTEM_167  Status: Pig Pig
-
-Test
-        spelltierlist = pd.read_csv("Data/Extra/spell_tier.csv")
-        spq = spelltierlist.query("tier == 1")
-        sp = spq["con_id"].sample(replace=True).item()
+Cecil career change
+Data\GameAssets\Serial\Res\Map\Map_30111\Map_30111_1\sc_e_0029_1.json
+            "label": "",
+            "mnemonic": "SysCall",
+            "operands": {
+                "iValues": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "rValues": [
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                "sValues": [
+                    "セシル転職",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    "",
+                    ""
+                ]
+            },
+            "type": 1,
+            "comment": ""
+        },

@@ -50,9 +50,10 @@ if __name__ == '__main__':
     ranbool=input("Randomize with default settings? (All) Y/N : ").upper()
     if ranbool == "Y":
         conbool="Y"
-        expbool="Y"
+        # expbool="Y"
         chabool="Y"
         abibool="Y"
+        mnbool="Y"
         armbool="Y"
         argbool="Y"
         weabool="Y"
@@ -65,9 +66,10 @@ if __name__ == '__main__':
         itebool="Y"
     else:    
         conbool=input("Adjust constants for higher maximum statistic caps and item stacks? Y/N : ").upper()
-        expbool=input("Adjust needed exp for leveling? Y/N : ").upper()
+        # expbool=input("Adjust needed exp for leveling? Y/N : ").upper()
         chabool=input("Adjust character growths? Y/N : ").upper()
         abibool=input("Adjust ability strengths and mana costs? Y/N : ").upper()
+        mnbool=input("Adjust monster stats? Y/N : ").upper()
         armbool=input("Adjust armor strengths, stats, and costs? Y/N : ").upper()
         if armbool == "Y":
             argbool=input("Adjust armor elements, procs, and group effectiveness? Y/N : ").upper()
@@ -121,10 +123,10 @@ if __name__ == '__main__':
         r1.constadjust()
         print("Complete")
     
-    if expbool == "Y":
-        print("Adjusting EXP values")
-        r1.expfix()
-        print("Complete")
+    # if expbool == "Y":
+    #     print("Adjusting EXP values")
+    #     r1.expfix()
+    #     print("Complete")
     
     #r1.growthflat(hpbot="40", hptop="101", mpbot="2", mptop="80", strbot="0", strtop="3", vitbot="0", vittop="3", agibot="0", agitop="3", intbot="0", inttop="3", spibot="0", spitop="3", magbot="0", magtop="3", lukbot="0", luktop="3")
     if chabool == "Y":
@@ -135,6 +137,11 @@ if __name__ == '__main__':
     if abibool == "Y":
         print("Adjusting ability strengths and mana")
         r1.abilitypercen()
+        print("Complete")
+        
+    if mnbool == "Y":
+        print("Adjusting monster stats")
+        r1.monsterpercen()
         print("Complete")
     
     if armbool == "Y":
@@ -179,7 +186,7 @@ if __name__ == '__main__':
     
     if shobool == "Y":
         print("Adjusting shop contents")
-        r1.shopstiers()
+        r1.shopstierstypes()
         print("Complete")
         
     if itebool == "Y":
