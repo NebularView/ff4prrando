@@ -47,7 +47,7 @@ if __name__ == '__main__':
     # r1.armorpercen()
     # r1.armorextras()
     
-    ranbool=input("Randomize with default settings? (All) Y/N : ").upper()
+    ranbool=input("Randomize types with default settings? (All) Y/N : ").upper()
     if ranbool == "Y":
         conbool="Y"
         # expbool="Y"
@@ -86,6 +86,77 @@ if __name__ == '__main__':
         chebool=input("Adjust chest contents? (Very Basic Tiered) Y/N : ").upper()
         shobool=input("Adjust shop contents? (Very Basic Tiered) Y/N : ").upper()
         itebool=input("Adjust item parameters? Y/N : ").upper()
+    
+    varbool = input("Use default min and max variance for types? Y/N : ").upper()
+    if varbool == "Y":
+        chatype = "Normal" 
+        abimin = 2
+        abimax = 1.5
+        mnmin = 2
+        mnmax = 1.5
+        armmin = 2
+        armmax = 1.5
+        weamin = 2 
+        weamax = 1.5
+        itemin = 2
+        itemax = 1.5
+        ranmode = "Normal"
+    else:
+        varbool2 = input("Use presets for min and max variance for types? Y/N : ").upper()
+        if varbool2 == "Y":
+            varbool3 = input("Select Preset: Low/Normal/High: ").upper()
+            if varbool3 == "LOW":
+                chatype = "Low" 
+                abimin = 4
+                abimax = 1
+                mnmin = 1
+                mnmax = 4
+                armmin = 4
+                armmax = 1
+                weamin = 4 
+                weamax = 1
+                itemin = 4
+                itemax = 1
+                ranmode = "Low"
+            elif varbool3 == "NORMAL":
+                chatype = "Normal" 
+                abimin = 2
+                abimax = 1.5
+                mnmin = 2
+                mnmax = 1.5
+                armmin = 2
+                armmax = 1.5
+                weamin = 2 
+                weamax = 1.5
+                itemin = 2
+                itemax = 1.5
+                ranmode = "Normal"
+            elif varbool3 == "HIGH":
+                chatype = "High" 
+                abimin = 1
+                abimax = 4
+                mnmin = 4
+                mnmax = 1
+                armmin = 1
+                armmax = 4
+                weamin = 1 
+                weamax = 4
+                itemin = 1
+                itemax = 4
+                ranmode = "High"
+        else:        
+            chatype = input("Select randomization type for character growths: Low/Normal/High :").upper()
+            abimin = input("Select divisor for lower bound of abilities: (Default: 2)").upper()
+            abimax = input("Select multiplier for upper bound of abilities: (Default: 1.5)").upper()
+            mnmin = input("Select divisor for lower bound of monster stats: (Default: 2)").upper()
+            mnmax = input("Select multiplier for upper bound of monster stats: (Default: 1.5)").upper()
+            armmin = input("Select divisor for lower bound of armor stats: (Default: 2)").upper()
+            armmax = input("Select multiplier for upper bound of armor stats: (Default: 1.5)").upper()
+            weamin = input("Select divisor for lower bound of weapon stats: (Default: 2)").upper() 
+            weamax = input("Select multiplier for upper bound of weapon stats: (Default: 1.5)").upper()
+            itemin = input("Select divisor for lower bound of item stats: (Default: 2)").upper()
+            itemax = input("Select multiplier for upper bound of item stats: (Default: 1.5)").upper()
+            ranmode = "Normal"
     
     
     
@@ -131,22 +202,22 @@ if __name__ == '__main__':
     #r1.growthflat(hpbot="40", hptop="101", mpbot="2", mptop="80", strbot="0", strtop="3", vitbot="0", vittop="3", agibot="0", agitop="3", intbot="0", inttop="3", spibot="0", spitop="3", magbot="0", magtop="3", lukbot="0", luktop="3")
     if chabool == "Y":
         print("Adjusting growths")
-        r1.growthset()
+        r1.growthset(chatype=chatype)
         print("Complete")
     
     if abibool == "Y":
         print("Adjusting ability strengths and mana")
-        r1.abilitypercen()
+        r1.abilitypercen(abimin=abimin, abimax=abimax)
         print("Complete")
         
     if mnbool == "Y":
         print("Adjusting monster stats")
-        r1.monsterpercen()
+        r1.monsterpercen(mnmin=mnmin, mnmax=mnmax)
         print("Complete")
     
     if armbool == "Y":
         print("Adjusting armor strengths, stats, and costs")
-        r1.armorpercen()
+        r1.armorpercen(armmin=armmin, armmax=armmax)
         print("Complete")
     
     if argbool == "Y":
@@ -156,7 +227,7 @@ if __name__ == '__main__':
     
     if weabool == "Y":    
         print("Adjusting weapon strengths, stats, and costs")
-        r1.weaponpercen()
+        r1.weaponpercen(weamin=weamin, weamax=weamax)
         print("Complete")
     
     if wegbool == "Y":
@@ -191,7 +262,7 @@ if __name__ == '__main__':
         
     if itebool == "Y":
         print("Adjusting item parameters")
-        r1.itempercen()
+        r1.itempercen(itemin=itemin, itemax=itemax)
         print("Complete")
         
     print("Randomization complete, Please check output directory!")

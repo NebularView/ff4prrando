@@ -65,7 +65,7 @@ class rando:
     #         f += 1 
         data.to_csv('output/data/GameAssets/Serial/Data/Master/exp_table.csv', index=False, encoding='utf-8')
     #
-    def growthpercen(self):
+    def growthpercen(self, **kwargs):
         #Percentage based growth off of current growth values, seems like a bad idea due to split between magic/melee
         data = pd.read_csv("Data/GameAssets/Serial/Data/Master/growth_curve.csv")
         for index, row in data.iterrows():
@@ -99,11 +99,17 @@ class rando:
             data._set_value(index, 'luck', randrange(int(kwargs.get("lukbot")), int(kwargs.get("luktop"))+1))
         data.to_csv('output/data/GameAssets/Serial/Data/Master/growth_curve.csv', index=False, encoding='utf-8')  
 
-    def growthset(self):
+    def growthset(self, **kwargs):
         #Growth based off of a set of values that should mimic the actual growth curve (if a little below)
         data = pd.read_csv("Data/GameAssets/Serial/Data/Master/growth_curve.csv")
+        chatype = kwargs.get("chatype")
         for index, row in data.iterrows():
-            stat=random.sample(["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1", "1", "1", "1" , "1", "1", "1", "1", "1", "1", "2", "2"], 7)  
+            if chatype == "Low":
+                stat=random.sample(["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1", "1", "1", "1" , "1", "1", "1", "1", "1", "1", "2", "2"], 7)
+            elif chatype == "High":
+                stat=random.sample(["0", "0", "0", "0", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1" , "1", "2", "2", "2", "2", "2", "3", "3"], 7)
+            else:
+                stat=random.sample(["0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "1", "1" , "1", "1", "1", "1", "1", "1", "1", "1"], 7)
             hp = randrange(row["lv"], row["lv"]*2)
             mp = randrange(0, 20)
             data._set_value(index, 'hp_value1', hp)
@@ -120,32 +126,36 @@ class rando:
             data._set_value(index, 'luck', stat[6])
         data.to_csv('output/data/GameAssets/Serial/Data/Master/growth_curve.csv', index=False, encoding='utf-8') 
 
-    def abilitypercen(self):
+    def abilitypercen(self, **kwargs):
+        abimin = kwargs.get("abimin")
+        abimax = kwargs.get("abimax")
         #Adjust ability power and mp cost by percent
         data = pd.read_csv("output/data/GameAssets/Serial/Data/Master/ability.csv")
         for index, row in data.iterrows():
-            data._set_value(index, 'use_value', randrange(int(row["use_value"]/2), int(row["use_value"]*1.5+1)))
-            data._set_value(index, 'standard_value', randrange(int(row["standard_value"]/2), int(row["standard_value"]*1.5+1)))
+            data._set_value(index, 'use_value', randrange(int(row["use_value"]/abimin), int(row["use_value"]*abimax+1)))
+            data._set_value(index, 'standard_value', randrange(int(row["standard_value"]/abimin), int(row["standard_value"]*abimax+1)))
         data.to_csv('output/data/GameAssets/Serial/Data/Master/ability.csv', index=False, encoding='utf-8')  
         
-    def armorpercen(self):
+    def armorpercen(self, **kwargs):
+        armmin = kwargs.get("armmin")
+        armmax = kwargs.get("armmax")
         #Adjusts columns listed below by percent for armor
         data = pd.read_csv("Data/GameAssets/Serial/Data/Master/armor.csv")
         uguid = data.equip_job_group_id.unique().tolist()
         for index, row in data.iterrows():
             gguid = random.sample(uguid, 1)
             data._set_value(index, 'equip_job_group_id', gguid[0])
-            data._set_value(index, 'defense', randrange(int(row["defense"]/2), int(row["defense"]*1.5+1)))
-            data._set_value(index, 'ability_defense', randrange(int(row["ability_defense"]/2), int(row["ability_defense"]*1.5+1)))
-            data._set_value(index, 'weight', randrange(int(row["weight"]/2), int(row["weight"]*1.5+1)))
-            data._set_value(index, 'evasion_rate', randrange(int(row["evasion_rate"]/2), int(row["evasion_rate"]*1.5+1)))
-            data._set_value(index, 'ability_evasion_rate', randrange(int(row["ability_evasion_rate"]/2), int(row["ability_evasion_rate"]*1.5+1)))
-            data._set_value(index, 'strength', randrange(abs(int(row["strength"]/2))-1, int(abs(row["strength"]*1.5+1))))
-            data._set_value(index, 'vitality', randrange(abs(int(row["vitality"]/2))-1, int(abs(row["vitality"]*1.5+1))))
-            data._set_value(index, 'agility', randrange(abs(int(row["vitality"]/2))-1, int(abs(row["vitality"]*1.5+1))))
-            data._set_value(index, 'intelligence', randrange(abs(int(row["intelligence"]/2))-1, int(abs(row["intelligence"]*1.5+1))))
-            data._set_value(index, 'spirit', randrange(abs(int(row["spirit"]/2))-1, int(abs(row["spirit"]*1.5+1))))
-            data._set_value(index, 'magic', randrange(abs(int(row["magic"]/2))-1, int(abs(row["magic"]*1.5+1))))
+            data._set_value(index, 'defense', randrange(int(row["defense"]/armmin), int(row["defense"]*armmax+1)))
+            data._set_value(index, 'ability_defense', randrange(int(row["ability_defense"]/armmin), int(row["ability_defense"]*armmax+1)))
+            data._set_value(index, 'weight', randrange(int(row["weight"]/armmin), int(row["weight"]*armmax+1)))
+            data._set_value(index, 'evasion_rate', randrange(int(row["evasion_rate"]/armmin), int(row["evasion_rate"]*armmax+1)))
+            data._set_value(index, 'ability_evasion_rate', randrange(int(row["ability_evasion_rate"]/armmin), int(row["ability_evasion_rate"]*armmax+1)))
+            data._set_value(index, 'strength', randrange(int(row["strength"]/armmin)-1, int(abs(row["strength"]*armmax+1))))
+            data._set_value(index, 'vitality', randrange(int(row["vitality"]/armmin)-1, int(abs(row["vitality"]*armmax+1))))
+            data._set_value(index, 'agility', randrange(int(row["vitality"]/armmin)-1, int(abs(row["vitality"]*armmax+1))))
+            data._set_value(index, 'intelligence', randrange(int(row["intelligence"]/armmin)-1, int(abs(row["intelligence"]*armmax+1))))
+            data._set_value(index, 'spirit', randrange(int(row["spirit"]/armmin)-1, int(abs(row["spirit"]*armmax+1))))
+            data._set_value(index, 'magic', randrange(int(row["magic"]/armmin)-1, int(abs(row["magic"]*armmax+1))))
             if row["buy"] == 0:
                 if row["defense"] == 0:
                     data._set_value(index, 'buy', randrange(1000, 50000))
@@ -158,7 +168,7 @@ class rando:
                 data._set_value(index, 'sell', int(row["buy"])/2)
         data.to_csv('output/data/GameAssets/Serial/Data/Master/armor.csv', index=False, encoding='utf-8') 
     
-    def armorextras(self):
+    def armorextras(self, **kwargs):
         #Implementation is bad, however this will randomize the resistances, the protected conditions and the species effectiveness of armor
         data = pd.read_csv("output/data/GameAssets/Serial/Data/Master/armor.csv")
         #Needs a template
@@ -236,11 +246,13 @@ class rando:
         systemdata.to_csv('output/data/GameAssets/Serial/Data/Message/system_en.txt', index=False, header=False, sep='\t', encoding='utf-8')
         data.to_csv('output/data/GameAssets/Serial/Data/Master/armor.csv', index=False, encoding='utf-8')
 
-    def itempercen(self):
+    def itempercen(self, **kwargs):
+        itemin = kwargs.get("itemin")
+        itemax = kwargs.get("itemax")
         #Items by percentages
         data = pd.read_csv("Data/GameAssets/Serial/Data/Master/item.csv")
         for index, row in data.iterrows():
-            data._set_value(index, 'standard_value', randrange(int(row["standard_value"]/2), int(row["standard_value"]*1.5+1)))
+            data._set_value(index, 'standard_value', randrange(int(row["standard_value"]/itemin), int(row["standard_value"]*itemax+1)))
             if row["buy"] == 0:
                 #Completely arbitrary at the moment
                 data._set_value(index, 'buy', randrange(1000, 5000))
@@ -252,21 +264,23 @@ class rando:
             data._set_value(index, 'sales_not_possible', 0)
         data.to_csv('output/data/GameAssets/Serial/Data/Master/item.csv', index=False, encoding='utf-8')                 
     
-    def weaponpercen(self):
+    def weaponpercen(self, **kwargs):
+        weamin = kwargs.get("weamin")
+        weamax = kwargs.get("weamax")
         #Weapons by percentages
         data = pd.read_csv("Data/GameAssets/Serial/Data/Master/weapon.csv")
         uguid = data.equip_job_group_id.unique().tolist()
         for index, row in data.iterrows():
             gguid = random.sample(uguid, 1)
             data._set_value(index, 'equip_job_group_id', gguid[0])
-            data._set_value(index, 'attack', randrange(int(row["attack"]/2), int(row["attack"]*1.5+1)))
-            data._set_value(index, 'weight', randrange(int(row["weight"]/2), int(row["weight"]*1.5+1)))
-            data._set_value(index, 'strength', randrange(int(row["strength"]/2)-1, int(abs(row["strength"]*1.5+1))))
-            data._set_value(index, 'vitality', randrange(int(row["vitality"]/2)-1, int(abs(row["vitality"]*1.5+1))))
-            data._set_value(index, 'agility', randrange(int(row["vitality"]/2)-1, int(abs(row["vitality"]*1.5+1))))
-            data._set_value(index, 'intelligence', randrange(int(row["intelligence"]/2)-1, int(abs(row["intelligence"]*1.5+1))))
-            data._set_value(index, 'spirit', randrange(int(row["spirit"]/2)-1, int(abs(row["spirit"]*1.5+1))))
-            data._set_value(index, 'magic', randrange(int(row["magic"]/2)-1, int(abs(row["magic"]*1.5+1))))
+            data._set_value(index, 'attack', randrange(int(row["attack"]/weamin), int(row["attack"]*weamax+1)))
+            data._set_value(index, 'weight', randrange(int(row["weight"]/weamin), int(row["weight"]*weamax+1)))
+            data._set_value(index, 'strength', randrange(int(row["strength"]/weamin)-1, int(abs(row["strength"]*weamax+1))))
+            data._set_value(index, 'vitality', randrange(int(row["vitality"]/weamin)-1, int(abs(row["vitality"]*weamax+1))))
+            data._set_value(index, 'agility', randrange(int(row["vitality"]/weamin)-1, int(abs(row["vitality"]*weamax+1))))
+            data._set_value(index, 'intelligence', randrange(int(row["intelligence"]/weamin)-1, int(abs(row["intelligence"]*weamax+1))))
+            data._set_value(index, 'spirit', randrange(int(row["spirit"]/weamin)-1, int(abs(row["spirit"]*weamax+1))))
+            data._set_value(index, 'magic', randrange(int(row["magic"]/weamin)-1, int(abs(row["magic"]*weamax+1))))
             if row["buy"] == 0:
                 if row["attack"] == 0:
                     #Completely arbitrary at the moment
@@ -281,7 +295,7 @@ class rando:
                 data._set_value(index, 'sell', int(row["buy"])/2)
         data.to_csv('output/data/GameAssets/Serial/Data/Master/weapon.csv', index=False, encoding='utf-8') 
 
-    def weaponextras(self):
+    def weaponextras(self, **kwargs):
         #More in depth than armor: Trigger, weak attribute, effective species, conditions, and attributes
         data = pd.read_csv("output/data/GameAssets/Serial/Data/Master/weapon.csv")
         systemdata = pd.read_csv("output/data/GameAssets/Serial/Data/Message/system_en.txt", delimiter='\t', names=['id', 'value'])
@@ -393,7 +407,7 @@ class rando:
         systemdata.to_csv('output/data/GameAssets/Serial/Data/Message/system_en.txt', index=False, header=False, sep='\t', encoding='utf-8')
         data.to_csv('output/data/GameAssets/Serial/Data/Master/weapon.csv', index=False, encoding='utf-8')
         
-    def weaponmonextras(self):
+    def weaponmonextras(self, **kwargs):
         #Same as above however trigger abilities can contain monster skills
         data = pd.read_csv("output/data/GameAssets/Serial/Data/Master/weapon.csv")
         systemdata = pd.read_csv("output/data/GameAssets/Serial/Data/Message/system_en.txt", delimiter='\t', names=['id', 'value'])
@@ -539,7 +553,7 @@ class rando:
         systemdata.to_csv('output/data/GameAssets/Serial/Data/Message/system_en.txt', index=False, header=False, sep='\t', encoding='utf-8')
         contentdata.to_csv('output/data/GameAssets/Serial/Data/Master/content.csv', index=False, encoding='utf-8')
         
-    def learning(self):
+    def learning(self, **kwargs):
         #this is a doozy
         #Loading Needed Files
         jobdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/job.csv") 
@@ -675,7 +689,7 @@ class rando:
         #pp = printer.magiclist("bah")
         #print(pp)      
 
-    def learningtiers(self):
+    def learningtiers(self, **kwargs):
         #same as above with tiered spells (pretty arbitrary)
         jobdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/job.csv") 
         contentdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/content.csv")
@@ -810,7 +824,7 @@ class rando:
         #print(pp)    
         
 
-    def learningmontiers(self):
+    def learningmontiers(self, **kwargs):
         #Learning but with monster skills
         jobdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/job.csv") 
         contentdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/content.csv")
@@ -880,6 +894,7 @@ class rando:
                 spq3 = spelltierlist.query("tier == 3")  
                 spq4 = spelltierlist.query("tier == 4")
                 while i < looper:
+                    sp = None
                     lvl=randrange(1, 81)
                     if lvl < 15:
 
@@ -896,15 +911,11 @@ class rando:
                     #lvl=randrange(1, 151)
                     #print(sp)
                     #print("test" + str(sp))
-                    new_row = {'id':masterid, 'type_id':1, 'value1':lvl, 'value2':0, 'job_id':row["id"], 'content_id':sp}
-                    #print(new_row)
-                    #learningdata = learningdata.concat(new_row, ignore_index=True)
-                    
-                    #print(masterid, 1, lvl, 0, jobdata["id"], sp)
-                    learningdata = learningdata.append([new_row], ignore_index = True)
-                    #print(learningdata)
-                    i += 1
-                    masterid += 1
+                    if sp != None:
+                        new_row = {'id':masterid, 'type_id':1, 'value1':lvl, 'value2':0, 'job_id':row["id"], 'content_id':sp}
+                        learningdata = learningdata.append([new_row], ignore_index = True)                    
+                        i += 1
+                        masterid += 1
             #1% chance to cast monster skills
             elif muser >= 100: 
                 print("Special Monster Spells: " + str(row["id"]))
@@ -1010,7 +1021,7 @@ class rando:
         #print(pp)        
 
         
-    def chests(self):
+    def chests(self, **kwargs):
         #Chest randomization
         contentdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/content.csv")
         cq = contentdata.query('mes_id_name.str.contains("ARMOR") or mes_id_name.str.contains("WEAPON") or mes_id_name.str.contains("ITEM")', engine='python')
@@ -1039,7 +1050,7 @@ class rando:
                     json.dump(map, out_file)
                     out_file.close()
 
-    def cheststiers(self):
+    def cheststiers(self, **kwargs):
         itemtierdata = pd.read_csv("Data/Extra/item_tier.csv")
         maptierdata = pd.read_csv("Data/Extra/map_tier.csv")
         #sp = cq["id"].sample(replace=True).item()
@@ -1100,7 +1111,7 @@ class rando:
                     json.dump(map, out_file)
                     out_file.close()
 
-    def monsterdrops(self):
+    def monsterdrops(self, **kwargs):
         #Randomizes monster drops
         monsterdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/monster.csv")
         contentdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/content.csv")
@@ -1123,7 +1134,7 @@ class rando:
         monsterdata.to_csv('output/data/GameAssets/Serial/Data/Master/monster.csv', index=False, encoding='utf-8')
         
 
-    def monsterdropstiers(self):
+    def monsterdropstiers(self, **kwargs):
         #Tiered version of above
         monsterdata = pd.read_csv("output/data/GameAssets/Serial/Data/Master/monster.csv")
         itemtierdata = pd.read_csv("Data/Extra/item_tier.csv")
@@ -1150,7 +1161,7 @@ class rando:
                     monsterdata._set_value(id, 'drop_content_id5', sp)
         monsterdata.to_csv('output/data/GameAssets/Serial/Data/Master/monster.csv', index=False, encoding='utf-8')
         
-    def monsterpercen(self):
+    def monsterpercen(self, **kwargs):
         #Tiered version of above
         monsterdata = pd.read_csv("output/data/GameAssets/Serial/Data/Master/monster.csv")
         #Weapons by percentages
@@ -1170,7 +1181,7 @@ class rando:
 
 
 
-    def shops(self):
+    def shops(self, **kwargs):
         #SHop randomization
         productdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/product.csv")
         contentdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/content.csv")
@@ -1219,7 +1230,7 @@ class rando:
         weapondata.to_csv('output/data/GameAssets/Serial/Data/Master/weapon.csv', index=False, encoding='utf-8')
         itemdata.to_csv('output/data/GameAssets/Serial/Data/Master/item.csv', index=False, encoding='utf-8')
         
-    def shopstiers(self):
+    def shopstiers(self, **kwargs):
         #Shop tiered randomization
         productdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/product.csv")
         #maptierdata = pd.read_csv("Data/map_tier.csv")
@@ -1288,7 +1299,7 @@ class rando:
         
         producttemp.to_csv('output/data/GameAssets/Serial/Data/Master/product.csv', index=False, encoding='utf-8')
 
-    def shopstierstypes(self):
+    def shopstierstypes(self, **kwargs):
         #Shop tiered randomization
         productdata = pd.read_csv("Data/GameAssets/Serial/Data/Master/product.csv")
         shoptierdata = pd.read_csv("Data/Extra/shop_tier.csv")
@@ -1309,8 +1320,10 @@ class rando:
                 itier4=itemtierdata.query('tier == @tier+1 and type == @itype')
                 new_row = {'id':masterid, 'content_id':2, 'group_id':shop, 'coefficient':0, 'purchase_limit':0}
                 producttemp = producttemp.append([new_row], ignore_index = True)
+                masterid +=1
                 new_row = {'id':masterid, 'content_id':21, 'group_id':shop, 'coefficient':0, 'purchase_limit':0}
                 producttemp = producttemp.append([new_row], ignore_index = True)
+                masterid +=1
             elif tier == 9:
                 itier=itemtierdata.query('tier == @tier and type == @itype')
                 itier2=itemtierdata.query('tier == @tier and type == @itype')
